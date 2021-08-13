@@ -3,10 +3,10 @@ module.exports = {
         HOME: 'home',
         SCHEDULER: {
             ID: 'scheduler',
-            GETTING_STARTED: 'gettingStarted',
+            GETTING_STARTED: 'getting-started',
             JOBS: 'jobs',
             CLUSTERS: 'clusters',
-            USE_CASES: 'useCases'
+            USE_CASES: 'use-cases'
         }
     },
 }

@@ -14,10 +14,12 @@ const routes = [
                 id: PAGES.SCHEDULER.GETTING_STARTED,
                 children: [
                     {
-                        display: 'How did we get here?'
+                        display: 'How did we get here?',
+                        id: 'how-we-got-here'
                     },
                     {
-                        display: 'Everything into one'
+                        display: 'Everything into one',
+                        id: 'everything-into-one'
                     }
                 ]
             },
@@ -27,23 +29,29 @@ const routes = [
                 children: [
                     {
                         display: 'Tags',
+                        id: 'tags',
                     },
                     {
                         display: 'Triggers',
+                        id: 'triggers',
                         children: [
                             {
-                                display: 'Time Based Trigger'
+                                display: 'Time Based Trigger',
+                                id: 'time-based-trigger'
                             },
                             {
-                                display: 'Pipeline Complete Trigger'
+                                display: 'Pipeline Complete Trigger',
+                                id: 'pipeline-complete-trigger'
                             },
                             {
-                                display: 'Job Failed Trigger'
+                                display: 'Job Failed Trigger',
+                                id: 'job-failed-trigger'
                             }
                         ]
                     },
                     {
-                        display: 'Tasks'
+                        display: 'Tasks',
+                        id: 'tasks'
                     },
                 ]
             },
@@ -52,22 +60,28 @@ const routes = [
                 id: PAGES.SCHEDULER.CLUSTERS,
                 children: [
                     {
-                        display: 'Spot Options'
+                        display: 'Spot Options',
+                        id: 'spot-options'
                     },
                     {
-                        display: 'Bootstrap Configurations and Actions'
+                        display: 'Bootstrap Configurations and Actions',
+                        id: 'bootstrap-advanced-configs'
                     },
                     {
                         display: 'Nodes',
+                        id: 'nodes',
                         children: [
                             {
-                                display: 'Master Instance'
+                                display: 'Master Instance',
+                                id: 'master-instances'
                             },
                             {
-                                display: 'Core Instance'
+                                display: 'Core Instance',
+                                id: 'core-instances'
                             },
                             {
-                                display: 'Single Capacity'
+                                display: 'Single Capacity',
+                                id: 'single-capacity'
                             }
                         ]
                     },
@@ -78,13 +92,16 @@ const routes = [
                 id: PAGES.SCHEDULER.USE_CASES,
                 children: [
                     {
-                        display: 'First'
+                        display: 'First',
+                        id: 'first'
                     },
                     {
-                        display: 'Second'
+                        display: 'Second',
+                        id: 'second'
                     },
                     {
-                        display: 'To keep in mind'
+                        display: 'To keep in mind',
+                        id: 'keeping-in-mind'
                     }
                 ]
             }
