@@ -5,6 +5,7 @@ import Home from 'pages/Home';
 import React from "react";
 import routes from 'utils/Routes';
 import Scheduler from './scheduler/Scheduler';
+import VisualDataHub from "pages/visual_data_hub/VisualDataHub";
 
 const styles = () => ({
     root: {}
@@ -57,12 +58,14 @@ class Factory extends React.Component {
     }
 
     renderSections = (breadcrumbs) => {
-        const {match, match: {params: {id = ''} = {}} = {}, location} = this.props
+        const {match: {params: {id = ''} = {}} = {}} = this.props
 
         let page = breadcrumbs[0]
         switch (page.id) {
             case PAGES.SCHEDULER.ID:
                 return <Scheduler breadcrumbs={breadcrumbs}/>
+            case PAGES.VISUAL_DATA_HUB.ID:
+                return <VisualDataHub breadcrumbs={breadcrumbs}/>
             default:
                 return <Home/>
         }

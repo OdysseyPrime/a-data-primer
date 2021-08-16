@@ -1,5 +1,4 @@
 import withStyles from "@material-ui/core/styles/withStyles";
-import Divider from 'presentations/Divider';
 import Typography from 'presentations/Typography';
 import React, {Fragment} from "react";
 

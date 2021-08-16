@@ -106,6 +106,60 @@ const routes = [
                 ]
             }
         ]
+    },
+    {
+        display: '2. Visual Data Hub',
+        id: PAGES.VISUAL_DATA_HUB.ID,
+        children: [
+            {
+                display: 'Plain Values Dictionary',
+                id: PAGES.VISUAL_DATA_HUB.PLAIN_VALUES_DICTIONARY,
+                children: [
+                    {
+                        display: 'What is Plain Values Dictionary?',
+                        id: 'what-is-pvd-error'
+                    },
+                    {
+                        display: 'Overcoming the issue',
+                        id: 'overcoming-the-issue'
+                    }
+                ]
+            },
+            {
+                display: 'Glob Patterns',
+                id: PAGES.VISUAL_DATA_HUB.GLOB_PATTERNS,
+                children: [
+                    {
+                        display: 'Example #1',
+                        id: 'example-1'
+                    },
+                    {
+                        display: 'Example #2',
+                        id: 'example-2'
+                    },
+                    {
+                        display: 'Example #3',
+                        id: 'example-3'
+                    },
+                    {
+                        display: 'Example #4',
+                        id: 'example-4'
+                    },
+                    {
+                        display: 'Example #5',
+                        id: 'example-5'
+                    },
+                    {
+                        display: 'Example #6',
+                        id: 'example-6'
+                    }
+                ]
+            },
+            {
+                display: 'Module JSON configuration',
+                id: PAGES.VISUAL_DATA_HUB.MODULE_JSON_CONFIG
+            }
+        ]
     }
 ]
 
