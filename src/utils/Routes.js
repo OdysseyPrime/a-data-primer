@@ -130,27 +130,27 @@ const routes = [
                 id: PAGES.VISUAL_DATA_HUB.GLOB_PATTERNS,
                 children: [
                     {
-                        display: 'Example #1',
+                        display: '1st Example',
                         id: 'example-1'
                     },
                     {
-                        display: 'Example #2',
+                        display: '2nd Example',
                         id: 'example-2'
                     },
                     {
-                        display: 'Example #3',
+                        display: '3rd Example',
                         id: 'example-3'
                     },
                     {
-                        display: 'Example #4',
+                        display: '4th Example',
                         id: 'example-4'
                     },
                     {
-                        display: 'Example #5',
+                        display: '5th Example',
                         id: 'example-5'
                     },
                     {
-                        display: 'Example #6',
+                        display: '6th Example',
                         id: 'example-6'
                     }
                 ]
@@ -158,6 +158,10 @@ const routes = [
             {
                 display: 'Module JSON configuration',
                 id: PAGES.VISUAL_DATA_HUB.MODULE_JSON_CONFIG
+            },
+            {
+                display: 'Querying S3 data on Athena',
+                id: PAGES.VISUAL_DATA_HUB.QUERYING_S3_DATA_ON_ATHENA
             }
         ]
     }

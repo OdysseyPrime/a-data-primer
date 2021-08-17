@@ -2,8 +2,6 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Divider from "presentations/Divider";
 import Typography from "presentations/Typography";
 import PVDHardReload from "assets/images/visual_data_hub/pvd_hard_reload.png"
-
-
 import React, {Fragment} from "react";
 import Code from "presentations/Code";
 

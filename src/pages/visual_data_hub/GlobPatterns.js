@@ -66,7 +66,7 @@ class GlobPatterns extends React.Component {
                 <Divider/>
 
                 <Typography id={example2.id} variant={'title'}>
-                    Example #2
+                    {example2.display}
                 </Typography>
                 <Typography variant={'p'}>
                     Reading data_first and data_fourth, but not data_second and data_third.
@@ -77,7 +77,7 @@ class GlobPatterns extends React.Component {
                 <Divider/>
 
                 <Typography id={example3.id} variant={'title'}>
-                    Example #3
+                    {example3.display}
                 </Typography>
                 <Typography variant={'p'}>
                     Reading everything but data_fourth.
@@ -88,7 +88,7 @@ class GlobPatterns extends React.Component {
                 <Divider/>
 
                 <Typography id={example4.id} variant={'title'}>
-                    Example #4
+                    {example4.display}
                 </Typography>
                 <Typography variant={'p'}>
                     Reading everything that starts with data_f and has four characters behind.
@@ -99,7 +99,7 @@ class GlobPatterns extends React.Component {
                 <Divider/>
 
                 <Typography id={example5.id} variant={'title'}>
-                    Example #5
+                    {example5.display}
                 </Typography>
                 <Typography variant={'p'}>
                     Reading everything that starts with data_f or data_s.
@@ -110,7 +110,7 @@ class GlobPatterns extends React.Component {
                 <Divider/>
 
                 <Typography id={example6.id} variant={'title'}>
-                    Example #6
+                    {example6.display}
                 </Typography>
                 <Typography variant={'p'}>
                     Reading data_second, data_first and data_fourth.

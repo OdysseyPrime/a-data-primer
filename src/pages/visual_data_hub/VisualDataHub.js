@@ -5,6 +5,7 @@ import React from "react";
 import GlobPatterns from "pages/visual_data_hub/GlobPatterns";
 import PlainValuesDictionary from "pages/visual_data_hub/PlainValuesDictionary";
 import ModuleJSONConfig from "pages/visual_data_hub/ModuleJSONConfig";
+import QueryingS3DataOnAthena from "pages/visual_data_hub/QueryingS3DataOnAthena";
 
 const styles = () => ({
     root: {},
@@ -30,6 +31,8 @@ class VisualDataHub extends React.Component {
                 return <GlobPatterns {...props} />
             case PAGES.VISUAL_DATA_HUB.MODULE_JSON_CONFIG:
                 return <ModuleJSONConfig {...props} />
+            case PAGES.VISUAL_DATA_HUB.QUERYING_S3_DATA_ON_ATHENA:
+                return <QueryingS3DataOnAthena {...props} />
         }
         return <Intro {...props} />
     }

@@ -49,15 +49,14 @@ class ModuleJSONConfig extends React.Component {
                 </Typography>
                 <Typography variant={'p'}>
                     Then it is guaranteed that no API call will be made, thus leaving everything as is in the module.
-                    That means not the schema, not the options and anything that is pre-set default will change.
                 </Typography>
                 <Typography variant={'p'}>
-                    This is a very nice workaround that you can do when you want to load a big data set. Since data is
-                    too big, then what you can do is load one partition:
+                    This is a very nice workaround that you can do when you want to load a big data set for example.
+                    Since data is too big, then what you can do is load one partition:
                 </Typography>
                 <Code>s3://prime-data-lake/production/pos/part-00000-0120aa5d-0619-4481-9ed7-3b2fef33eb30-c000.snappy.parquet</Code>
                 <Typography variant={'p'}>
-                    Then removing the partition part in JSON Configuration to:
+                    Then remove the partition part in JSON Configuration to:
                 </Typography>
                 <Code>s3://prime-data-lake/production/pos/</Code>
                 <Typography variant={'p'}>
