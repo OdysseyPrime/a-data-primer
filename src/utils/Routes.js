@@ -162,6 +162,24 @@ const routes = [
             {
                 display: 'Querying S3 data on Athena',
                 id: PAGES.VISUAL_DATA_HUB.QUERYING_S3_DATA_ON_ATHENA
+            },
+            {
+                display: 'Ensuring Data Append',
+                id: PAGES.VISUAL_DATA_HUB.ENSURING_DATA_APPENDING
+            },
+            {
+                display: 'Processing JSON data',
+                id: PAGES.VISUAL_DATA_HUB.PROCESSING_JSON_DATA,
+                children: [
+                    {
+                        display: 'Use Case',
+                        id: 'use-case'
+                    },
+                    {
+                        display: 'Solution',
+                        id: 'solution'
+                    }
+                ]
             }
         ]
     }

@@ -115,6 +115,8 @@ class QueryingS3DataOnAthena extends React.Component {
                 <Typography><img src={S3ToAthenaDBTable}/></Typography>
                 <Typography>Your table will be listed below if everything has run correctly. It is worth mentioning that
                 there is a cost applied to every service we request.</Typography>
+
+                <Typography>Make sure to remove the tables you have created after using them.</Typography>
             </Fragment>
         )
     }

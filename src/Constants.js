@@ -13,7 +13,9 @@ module.exports = {
             PLAIN_VALUES_DICTIONARY: 'plain-values-dictionary',
             GLOB_PATTERNS: 'glob-patterns',
             MODULE_JSON_CONFIG: 'module-json-config',
-            QUERYING_S3_DATA_ON_ATHENA: 'querying-s3-data-on-athena'
+            QUERYING_S3_DATA_ON_ATHENA: 'querying-s3-data-on-athena',
+            PROCESSING_JSON_DATA: 'processing-json-data',
+            ENSURING_DATA_APPENDING: 'ensuring-data-appending'
         }
     },
 }
