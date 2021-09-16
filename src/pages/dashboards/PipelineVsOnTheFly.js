@@ -69,7 +69,7 @@ class DataSplitsAndPartitions extends React.Component {
                 <Typography variant={'p'}>
                     With this action, we are forcing the dashboard to calculate our own written expressions after the
                     initial data from S3 has been read from Presto. If the platform does not hit cache, then this
-                    calculation will be repated over and over again.
+                    calculation will be repeated over and over again.
                 </Typography>
 
                 <Typography id={pipelineModule.id} variant={'title'}>

@@ -53,14 +53,14 @@ class DataSplitsAndPartitions extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    We will talk about the second point later on; for now, let us elaborate the first one.
+                    We will talk about the second point later; for now, let us elaborate the first one.
                 </Typography>
 
                 <Typography variant={'p'}>
                     In order for the pipeline to complete as fast as possible, our processing engine, Spark does
-                    partitioning, which means it distributes the load to it's processing cores. The main problem with
+                    partitioning, which means it distributes the load to its processing cores. The main problem with
                     this is that unless specified by the user, Spark will most likely generate hundreds of partitions.
-                    How do partitions look like?
+                    What do partitions look like?
                 </Typography>
 
                 <Typography variant={'p'}>
@@ -73,7 +73,7 @@ class DataSplitsAndPartitions extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    This means that everytime you require a dashboard, Presto, which is our query engine will try
+                    This means that every time you require a dashboard, Presto, which is our query engine will try
                     to combine all of these files and give you a visual display in dashboards. In this case, 5 partitions
                     are easy to handle (depending on the size), but if there were more, then overhead is created in
                     proportion with the number of partitions.
@@ -96,7 +96,7 @@ class DataSplitsAndPartitions extends React.Component {
                     Calculating the total size, we
                     get 502 * 2.5 MB = 1255 MB. As we can tell, the data size is quite big, but another problem with
                     this
-                    data set is that it is split in 500 parts. In order for Presto to collect all of the partitions,
+                    data set is that it is split in 500 parts. For Presto to collect all of the partitions,
                     it needs time and processing power.
                 </Typography>
 
@@ -116,9 +116,8 @@ class DataSplitsAndPartitions extends React.Component {
                     {repartition.display}
                 </Typography>
                 <Typography variant={'p'}>
-                    Repartition is the process where we try to enforce Spark (default 500 partitions) to use less
-                    partitions
-                    than auto generated. We can do this in two ways:
+                    Repartitioning is the process where we try to enforce Spark (default 500 partitions) to use less
+                    partitions than auto generated. We can do this in two ways:
                 </Typography>
 
 
@@ -150,7 +149,7 @@ class DataSplitsAndPartitions extends React.Component {
                 </Typography>
                 <Typography variant={'p'}>
                     Partition by is the database process where very large tables are divided into multiple smaller parts.
-                    This process is a two edged sword, since if used correctly, it immensely increases the performance
+                    This process is a two-edged sword, since if used correctly, it immensely increases the performance
                     because it enables Spark not to do a full scan of all the data and if used incorrectly, it generates
                     a dozen of partitions inside a dozen of objects.
                 </Typography>
@@ -187,7 +186,7 @@ class DataSplitsAndPartitions extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    Both mentioned above settings work for partition by as well. The overhead affects partitioned by data
+                    Both settings mentioned above work for partition by as well. The overhead affects partitioned by data
                     as well. For example, a partitioned by object that holds hundreds of partitions will still run slow.
                 </Typography>
 

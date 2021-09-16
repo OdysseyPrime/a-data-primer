@@ -18,8 +18,8 @@ class Intro extends React.Component {
                     <Divider/>
                 </Typography>
                 <Typography variant='p'>
-                    Dashboards is a platform feature that allows the visual display of all our data through a variety
-                    of graphs. While it can be used in all kinds of different ways, its primary intention is to provide
+                    Dashboards is a platform feature that allows the visual display of all our insights through a variety
+                    of graphs. While dashboards can be used in all kinds of different ways, the primary intention is to provide
                     information at-a-glance, such as KPIs. Since dashboards are closely linked to Visual Data Hub,
                     sometimes it becomes an issue to load the visual insights when the data is not properly formatted.
                     We will do a round of explanation on how to get the most out of this tool, that being especially

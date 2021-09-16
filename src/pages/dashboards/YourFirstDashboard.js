@@ -30,8 +30,8 @@ class YourFirstDashboard extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    In order to get the most out of this tool, we have to know the complete process of what happens
-                    when we export to a Data Lake Exporter.
+                    To get the most out of this tool, we have to know the complete process of what happens
+                    when we export data to a Data Lake Exporter.
                 </Typography>
 
                 <Typography id={exportingToDataLake.id} variant={'title'}>
@@ -57,7 +57,7 @@ class YourFirstDashboard extends React.Component {
                 </Code>
 
                 <Typography variant={'p'}>
-                    In order to find projectId and pipelineId, we have to break down our platform uri of the pipeline we
+                    To find projectId and pipelineId, we have to break down our platform uri of the pipeline we
                     have run, in this case:
                 </Typography>
 
@@ -66,7 +66,7 @@ class YourFirstDashboard extends React.Component {
                 </Code>
 
                 <Typography variant={'p'}>
-                    As our main uri, which does not come to help goes:
+                    As our main url, which does not come to help goes:
                 </Typography>
                 <Code>
                     https://platform.goprime.io/vetl/60d9bf23227bda000110c158/
@@ -104,7 +104,7 @@ class YourFirstDashboard extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    Let us create a dashboard that uses that data source as input, as following:
+                    Let us create a dashboard that uses that data source as input:
                 </Typography>
                 <Typography variant={'p'}>
                     <img src={DashboardCreating}/>
@@ -119,11 +119,9 @@ class YourFirstDashboard extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    Then save the dashboard. Now everytime you refresh the page, the widget will reload. By reload,
+                    Then save the dashboard. Now every time you refresh the page, the widget will reload. By reload,
                     we mean that the widget is loaded by either cache or by the Data Lake Exportation path.
                 </Typography>
-
-
             </Fragment>
         )
     }
