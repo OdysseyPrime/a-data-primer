@@ -10,20 +10,6 @@ const routes = [
         id: PAGES.SCHEDULER.ID,
         children: [
             {
-                display: 'Getting Started',
-                id: PAGES.SCHEDULER.GETTING_STARTED,
-                children: [
-                    {
-                        display: 'How did we get here?',
-                        id: 'how-we-got-here'
-                    },
-                    {
-                        display: 'Everything into one',
-                        id: 'everything-into-one'
-                    }
-                ]
-            },
-            {
                 display: 'Jobs',
                 id: PAGES.SCHEDULER.JOBS,
                 children: [
@@ -112,6 +98,10 @@ const routes = [
         id: PAGES.VISUAL_DATA_HUB.ID,
         children: [
             {
+                id: PAGES.VISUAL_DATA_HUB.YOUR_FIRST_PIPELINE,
+                display: 'Your First Pipeline',
+            },
+            {
                 display: 'Plain Values Dictionary',
                 id: PAGES.VISUAL_DATA_HUB.PLAIN_VALUES_DICTIONARY,
                 children: [
@@ -182,6 +172,58 @@ const routes = [
                 ]
             }
         ]
+    },
+    {
+        display: '3. Dashboards',
+        id: PAGES.DASHBOARDS.ID,
+        children: [
+            {
+                display: 'Your First Dashboard',
+                id: PAGES.DASHBOARDS.YOUR_FIRST_DASHBOARD,
+                children: [
+                    {
+                        display: 'Exporting to Data Lake',
+                        id: 'exporting-to-data-lake'
+                    },
+                    {
+                        display: 'Querying',
+                        id: 'querying'
+                    }
+                ]
+            },
+            {
+                display: 'Data Splits and Partitions',
+                id: PAGES.DASHBOARDS.DATA_SPLITS_AND_PARTITIONS,
+                children: [
+                    {
+                        display: 'Overhead Issues',
+                        id: 'overhead-issues'
+                    },
+                    {
+                        id: 'repartition',
+                        display: 'Repartition'
+                    },
+                    {
+                        id: 'partition-by',
+                        display: 'Partition by'
+                    }
+                ]
+            },
+            {
+                display: 'Pipeline vs On The Fly Calculations',
+                id: PAGES.DASHBOARDS.PIPELINE_VS_ON_THE_FLY,
+                children: [
+                    {
+                        display: 'Your Own Field',
+                        id: 'your-own-field'
+                    },
+                    {
+                        display: 'Pipeline Module',
+                        id: 'pipeline-module'
+                    }
+                ]
+            }
+        ]
     }
 ]
 
@@ -201,9 +243,6 @@ export const findById = (id) => {
     }, []).find(which => which.id === id)
 }
 
-/**
- * Created by LeutrimNeziri on 30/03/2019.
- */
 export default routes.map(format)
 
 

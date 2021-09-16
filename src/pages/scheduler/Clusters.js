@@ -36,14 +36,14 @@ class Clusters extends React.Component {
                     free to be taken back by AWS, and many more options.
                 </Typography>
                 <Typography variant={'p'}>
-                    Before diving in to clusters, let us explain two very important AWS concepts that will follow us
+                    Before diving into clusters, let us explain two very important AWS concepts that will follow us
                     through all AWS related topics.
                     <ol>
                         <li>Spot instances: A Spot Instance is an instance that uses spare EC2 capacity that is
                             available for less than the On-Demand price. Because Spot Instances enable you to request
                             unused EC2 instances at steep discounts, you can lower your Amazon EC2 costs significantly.
                         </li>
-                        <li>On demand instances: With On-Demand Instances, you pay for compute capacity by the second
+                        <li>On demand instances: With On-Demand Instances, you pay for compute capacity per second
                             with no long-term commitments. You have full control over its lifecycle—you decide when to
                             launch, stop, hibernate, start, reboot, or terminate it.
                         </li>
@@ -66,11 +66,11 @@ class Clusters extends React.Component {
                 </Typography>
                 <Typography variant={'p'}>
                     <ol>
-                        <li>Defined duration: the amount of minutes that you are renting the instances from AWS. Because
+                        <li>Defined duration: the number of minutes that you are renting the instances from AWS. Because
                             AWS instances are high on demand, chances are very likely that your instances will be taken
                             out after this duration.
                         </li>
-                        <li>Timeout duration: the amount of minutes that you take an action specified by On Timeout
+                        <li>Timeout duration: the number of minutes that you take an action specified by On Timeout
                             action.
                         </li>
                         <li>Timeout action: the action to take after minutes specified by Timeout Duration have passed.
@@ -82,8 +82,8 @@ class Clusters extends React.Component {
                         </ul>
                     </ol>
                     In our case, the configurations that we have set in the image above make a request to get a
-                    cluster that has 3 hours (can be more, if instances are not high on demand) up time. If the
-                    instances can not be provisioned, then terminate the cluster.
+                    cluster that has 3 hours (can be more if instances are not high on demand) up time. If the
+                    instances cannot be provisioned, then terminate the cluster.
                 </Typography>
 
                 <Typography id={bootstrapOptions.id} variant={'title'}>
@@ -103,9 +103,9 @@ class Clusters extends React.Component {
                 </Typography>
                 <Typography variant={'p'}>
                     An important consideration when you create an EMR cluster is how you configure Amazon EC2 instances
-                    and network options. EC2 instances in an EMR cluster are organized into node types. There are three:
-                    master nodes, core nodes, and task nodes. Each node type performs a set of roles defined by the
-                    distributed applications that you install on the cluster.
+                    and network options. EC2 instances in an EMR cluster are organized into node types. There are three
+                    node types: master nodes, core nodes, and task nodes. Each node type performs a set of roles defined
+                    by the distributed applications that you install on the cluster.
                     <ol>
                         <li>
                             The master node manages the cluster and typically runs master components of distributed
@@ -130,7 +130,7 @@ class Clusters extends React.Component {
                     <img src={masterNodeImg}/>
                 </Typography>
                 <Typography variant={'p'}>
-                    A configuration of a spot master instance. Master node always needs only one instance.
+                    A configuration of a spot master instance. A master node always needs only one instance.
                     This node is of type m4.2xlarge (has 8 vCPUs and 32GB of RAM).
                 </Typography>
                 <Divider/>
@@ -157,10 +157,10 @@ class Clusters extends React.Component {
                 <Typography variant={'p'}>
                     A configuration of two spot core instances. Core instances are of type m4.2xlarge (has 8 vCPUs and
                     32GB of RAM) and d2.8xlarge (has 36 vCPUs, 244GB of RAM and 759GB of HDD storage). The target
-                    capacity of one will be filled with the cheapest available instance there is. Precisely, we will
+                    capacity of one will be filled with the cheapest available instance. Precisely, we will
                     first look to spin up the cluster with one core m4.2xlarge instance, if that is not available, then
                     we switch to d2.8xlarge, if that is not available, then the cluster fails because of not being able
-                    to provision the required instances.
+                    to provide the required instances.
                 </Typography>
                 <Divider/>
             </Fragment>

@@ -6,6 +6,7 @@ import React from "react";
 import routes from 'utils/Routes';
 import Scheduler from './scheduler/Scheduler';
 import VisualDataHub from "pages/visual_data_hub/VisualDataHub";
+import Dashboards from "pages/dashboards/Dashboards";
 
 const styles = () => ({
     root: {}
@@ -66,6 +67,8 @@ class Factory extends React.Component {
                 return <Scheduler breadcrumbs={breadcrumbs}/>
             case PAGES.VISUAL_DATA_HUB.ID:
                 return <VisualDataHub breadcrumbs={breadcrumbs}/>
+            case PAGES.DASHBOARDS.ID:
+                return <Dashboards breadcrumbs={breadcrumbs}/>
             default:
                 return <Home/>
         }

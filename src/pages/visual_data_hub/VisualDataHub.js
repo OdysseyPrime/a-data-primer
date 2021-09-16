@@ -8,6 +8,7 @@ import ModuleJSONConfig from "pages/visual_data_hub/ModuleJSONConfig";
 import QueryingS3DataOnAthena from "pages/visual_data_hub/QueryingS3DataOnAthena";
 import ProcessingJSONData from "pages/visual_data_hub/ProcessingJSONData";
 import EnsuringDataAppending from "pages/visual_data_hub/EnsuringDataAppending";
+import YourFirstPipeline from "pages/visual_data_hub/YourFirstPipeline";
 
 const styles = () => ({
     root: {},
@@ -27,6 +28,8 @@ class VisualDataHub extends React.Component {
         }
 
         switch (section.id) {
+            case PAGES.VISUAL_DATA_HUB.YOUR_FIRST_PIPELINE:
+                return <YourFirstPipeline {...props} />
             case PAGES.VISUAL_DATA_HUB.PLAIN_VALUES_DICTIONARY:
                 return <PlainValuesDictionary {...props} />
             case PAGES.VISUAL_DATA_HUB.GLOB_PATTERNS:

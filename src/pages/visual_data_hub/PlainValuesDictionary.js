@@ -42,7 +42,7 @@ class PlainValuesDictionary extends React.Component {
                     From this point, two potential use cases might arise:
                     <ol>
                         <li>If the file is updated with one more column, let’s say columnC (meaning our parquet file now
-                            has three columns, columnA, columnB and columnC), and the importer in platform is not hard
+                            has three columns, columnA, columnB and columnC), and the importer in the platform is not hard
                             reloaded, then the exported data will have two columns again. That means that the
                             schema is loaded from our importer module (cache) and not directly from the file.
                         </li>
@@ -70,7 +70,7 @@ class PlainValuesDictionary extends React.Component {
 
                 <Typography>
                     This use case is very useful when you are working with versioned data, and you know that the schema
-                    might change eventually (we add some more columns on select on earlier pipelines).
+                    might eventually change.
                 </Typography>
             </Fragment>
         )

@@ -35,10 +35,10 @@ class ProcessingJSONData extends React.Component {
                     {useCase.display}
                 </Typography>
                 <Typography variant={'p'}>
-                    Say we have a REST API to fetch data from, and we want that data to be processed through VDH
+                    Say we have a REST API to fetch data from. We want that data to be processed through VDH
                     and export the results into a dashboard, a parquet or whatever the need. Usually, when we want to
                     hit a REST API endpoint, there are credentials to be provided. We do not worry about this, we
-                    assume we have the data ready and it looks as below (almost always, REST API endpoints give a
+                    assume we have the data ready and it looks like this (almost always, REST API endpoints give a
                     response that starts with a result key):
                 </Typography>
 
@@ -51,7 +51,7 @@ class ProcessingJSONData extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    Let's load this in VDH, since JSON importer does one round of auto-parsing, then the Data Overview
+                    Let's load this into VDH, since JSON importer does one round of auto-parsing, then the Data Overview
                     will look like this:
                 </Typography>
 
@@ -60,7 +60,7 @@ class ProcessingJSONData extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    Right know, this row is a string. In order for us to process this, we have to parse it as JSON.
+                    Right know, this row is a string. For us to process this, we have to parse it as JSON.
                     Data parsing is a method where one string of data gets converted into a different type of data.
                     In our case, we parse this row to an array of objects, meaning this row corresponds this data type:
                 </Typography>
@@ -125,7 +125,8 @@ class ProcessingJSONData extends React.Component {
 
                 <Typography variant={'p'}>
                     This is a simple reduce function useful for this case. The first parameter requires the array we
-                    want to operate on and the second parameter holds the start value. Data Overview then looks like this:
+                    want to operate on, and the second parameter holds the start value. Data Overview then looks like
+                    this:
                 </Typography>
 
                 <Typography variant={'p'}>
@@ -134,7 +135,7 @@ class ProcessingJSONData extends React.Component {
 
                 <Typography variant={'p'}>
                     We can now say that we have successfully parsed the JSON data and converted it into a format
-                    that we like to operate more easily.
+                    that can handle more easily.
                 </Typography>
             </Fragment>
         )

@@ -23,7 +23,7 @@ class ModuleJSONConfig extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    If you hover through a module options, you will find JSON Config. What is that exactly?
+                    If you hover through a module option, you will find JSON Config. What is that exactly?
                 </Typography>
 
                 <Typography variant={'p'}>
@@ -52,7 +52,7 @@ class ModuleJSONConfig extends React.Component {
                 </Typography>
                 <Typography variant={'p'}>
                     This is a very nice workaround that you can do when you want to load a big data set for example.
-                    Since data is too big, then what you can do is load one partition:
+                    If data is too big, you can load one partition:
                 </Typography>
                 <Code>s3://prime-data-lake/production/pos/part-00000-0120aa5d-0619-4481-9ed7-3b2fef33eb30-c000.snappy.parquet</Code>
                 <Typography variant={'p'}>
@@ -60,12 +60,12 @@ class ModuleJSONConfig extends React.Component {
                 </Typography>
                 <Code>s3://prime-data-lake/production/pos/</Code>
                 <Typography variant={'p'}>
-                    This way we are using the full data set with a sample of one partition which is loaded super fast
-                    through VDH. We avoid scanning through full table, which saves a lot of time.
+                    This way we are using the full data set with a sample of one partition which is loaded super-fast
+                    through VDH. We avoid scanning through the full table, which saves a lot of time.
                 </Typography>
 
                 <Typography variant={'p'}>
-                    There a lot of options in there as well that you can not find in UI, for example:
+                    There are a lot of options in there as well that you cannot find in UI, for example:
                     <ul>
                         <li>The optimize flag: set to true, allows your data to be exported with a data size that you
                             specify, in
@@ -96,8 +96,8 @@ class ModuleJSONConfig extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    By default, these settings are disabled but can be enabled only through the JSON Configuration
-                    section. This section also allows us to use modules which we do not currently have an UI for,
+                    By default, these settings are disabled and can be enabled only through the JSON Configuration
+                    section. This section also allows us to use modules for which we do not currently have an UI,
                     for example (at the moment of writing this):
                     <ol>
                         <li>Euclidean Distance</li>

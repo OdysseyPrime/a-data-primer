@@ -49,8 +49,8 @@ class GlobPatterns extends React.Component {
                         <li>data_third</li>
                         <li>data_fourth</li>
                     </ol>
-                    Each of them have only one column named name and one row named filenameUser, meaning CSV file
-                    data_first has one row which contains firstUser. We will go through some examples from VDH below;
+                    Each of them has only one column named name and one row named filenameUser, meaning CSV file
+                    data_first has one row which contains firstUser. We will go through some examples from VDH below.
                 </Typography>
 
                 <Typography id={example1.id} variant={'title'}>

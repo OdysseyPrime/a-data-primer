@@ -4,7 +4,6 @@ import Intro from "pages/scheduler/Intro";
 import React from "react";
 import Jobs from "./Jobs";
 import Clusters from "./Clusters";
-import GettingStarted from "./GettingStarted";
 import UseCases from "pages/scheduler/UseCases";
 
 const styles = () => ({
@@ -25,8 +24,6 @@ class Scheduler extends React.Component {
         }
 
         switch (section.id) {
-            case PAGES.SCHEDULER.GETTING_STARTED:
-                return <GettingStarted {...props} />
             case PAGES.SCHEDULER.JOBS:
                 return <Jobs {...props} />
             case PAGES.SCHEDULER.CLUSTERS:

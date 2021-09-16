@@ -62,11 +62,13 @@ class QueryingS3DataOnAthena extends React.Component {
                     correct:
                 </Typography>
 
-                <Code>https://s3.console.aws.amazon.com/s3/buckets/prime-data-lake?prefix=production/client/data/ - WRONG!
+                <Code>https://s3.console.aws.amazon.com/s3/buckets/prime-data-lake?prefix=production/client/data/ -
+                    WRONG!
                 </Code>
 
                 <Typography>
-                    Having copied the correct URi, open the AWS Glue service on your AWS console and navigate to Crawlers,
+                    Having copied the correct URi, open the AWS Glue service on your AWS console and navigate to
+                    Crawlers,
                     as in the image:
                 </Typography>
 
@@ -81,13 +83,15 @@ class QueryingS3DataOnAthena extends React.Component {
 
                 <Typography>
                     <ol>
-                        <li>Add information about your crawler - the name of the crawler, we skip Tags, description, etc.</li>
+                        <li>Add information about your crawler - the name of the crawler, we skip Tags, description,
+                            etc.
+                        </li>
                         <Typography><img src={S3ToAthenaCrawlerName}/></Typography>
 
                         <li>Specify crawler source type - we do not touch the default settings.</li>
                         <Typography><img src={S3ToAthenaCrawlerSourceType}/></Typography>
 
-                        <li>Add a data store - we specify our path to Include Path section.</li>
+                        <li>Add a data store - we specify our path at the Include Path section.</li>
                         <Typography><img src={S3ToAthenaCrawlerDataStore}/></Typography>
 
                         <li>Add another data store - if we want to add multiple sources.</li>
@@ -100,12 +104,14 @@ class QueryingS3DataOnAthena extends React.Component {
                         <Typography><img src={S3ToAthenaCrawlerSchedule}/></Typography>
 
                         <li>Configure the crawler's output - specify database and
-                        add a prefix, for table name is appended to your prefix.</li>
+                            add a prefix, the table name is appended to your prefix.
+                        </li>
                         <Typography><img src={S3ToAthenaCrawlerCrawlerOutput}/></Typography>
 
                         <li>Configure output wrap up.</li>
                         <Typography><img src={S3ToAthenaCrawlerOutput}/></Typography>
-                        <Typography>And click finish, then you can see your crawler in the list, you can start it by clicking Run Crawler.</Typography>
+                        <Typography>And click finish, then you can see your crawler in the list. You can start it by
+                            clicking Run Crawler.</Typography>
                         <Typography><img src={S3ToAthenaRunCrawler}/></Typography>
                     </ol>
                 </Typography>
@@ -114,7 +120,7 @@ class QueryingS3DataOnAthena extends React.Component {
                     database you have set earlier.</Typography>
                 <Typography><img src={S3ToAthenaDBTable}/></Typography>
                 <Typography>Your table will be listed below if everything has run correctly. It is worth mentioning that
-                there is a cost applied to every service we request.</Typography>
+                    there is a cost applied to every service we request.</Typography>
 
                 <Typography>Make sure to remove the tables you have created after using them.</Typography>
             </Fragment>

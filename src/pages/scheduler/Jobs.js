@@ -44,7 +44,7 @@ class Jobs extends React.Component {
 
                 <Typography variant={'p'}>
                     Jobs enable us to schedule EMR steps through VDH pipelines or Spark Custom Steps, set a
-                    Trigger (be them time based or state change based) and add Tags to our needs.
+                    Trigger (they are time based, or state change based) and add Tags to our needs.
                 </Typography>
 
                 <Typography id={tags.id} variant={'title'}>
@@ -63,8 +63,8 @@ class Jobs extends React.Component {
                     <img src={tagImage}/>
                 </Typography>
                 <Typography variant={'p'}>
-                    Beside the tags that we specify in this form as shown above, there are quite some tags which are
-                    set built-in, so we can exactly track down the costs through AWS Billing service.
+                    Beside the custom made, there are quite some tags which are set built-in, so we can exactly track
+                    down the costs through AWS Billing service.
                 </Typography>
                 <Typography variant={'p'}>
                     For example, if we are to check Makro's Price Run tags through EMR, we can find that:
@@ -83,9 +83,9 @@ class Jobs extends React.Component {
                 <Typography variant={'p'}>
                     When scheduling, we have two options to set as triggers:
                     <ol>
-                        <li>Time Based Triggers: triggered on a periodic or non periodic time manner that we set.</li>
+                        <li>Time Based Triggers: triggered on a periodic or non-periodic time manner that we set.</li>
                         <li>On State Change: triggered when the state of a pipeline or job is changed. A pipeline or
-                        can have three states:
+                        job can have three states:
                             <ul>
                                 <li>Job Starts</li>
                                 <li>Job Fails</li>
@@ -142,21 +142,21 @@ class Jobs extends React.Component {
                     This list is then fed into a Job and is executed when triggers are activated.
                 </Typography>
                 <Typography variant={'p'}>
-                    When creating a job that processes data into a dedicated cluster, then when specifying tasks, we
-                    are enabled to chose an Action on Failure consequence. This means that we can decide either to
+                    When creating a job that processes data into a dedicated cluster, and we specify tasks, we
+                    are enabled to choose an Action on Failure consequence. This means that we can decide either to
                     keep the cluster alive when a step fails or keep running, depending on whether the steps are
-                    dependant on each other or not.
+                    dependent on each other or not.
                 </Typography>
 
                 <Typography variant={'p'}>
-                    The following example will terminate the cluster if the specified step will not run successfully.
+                    The following example will terminate the cluster if the specified step does not run successfully.
                 </Typography>
                 <Typography variant={'p'}>
                     <img src={taskTerminateCluster}/>
                 </Typography>
                 <Typography variant={'p'}>
-                    This is possible because the default cluster is selected a dedicated one, and not general ETL
-                    Cluster.
+                    This is possible because the default cluster that is selected, is a dedicated one, and not general
+                    the default General Cluster.
                 </Typography>
                 <Typography variant={'p'}>
                     <img src={jobDedicatedCluster}/>

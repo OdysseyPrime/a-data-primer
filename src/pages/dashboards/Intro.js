@@ -14,15 +14,16 @@ class Intro extends React.Component {
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Visual Data Hub
+                    Dashboards
                     <Divider/>
                 </Typography>
                 <Typography variant='p'>
-                    Visual Data Hub, aka. VDH is an Extract-Transform-Load service offered by the platform that allows
-                    data on-boarding, processing, crawling and so on. This tool is the connecting bridge between raw
-                    data numbers and useful insights that we call dashboards. This documentation will walk you through
-                    key issues, details, tips and tricks so you have a clear idea how the tool is supposed to work, thus
-                    leading to optimised and clear results.
+                    Dashboards is a platform feature that allows the visual display of all our data through a variety
+                    of graphs. While it can be used in all kinds of different ways, its primary intention is to provide
+                    information at-a-glance, such as KPIs. Since dashboards are closely linked to Visual Data Hub,
+                    sometimes it becomes an issue to load the visual insights when the data is not properly formatted.
+                    We will do a round of explanation on how to get the most out of this tool, that being especially
+                    performance.
                 </Typography>
                 <Typography variant='p'>
                     This service contains the underlying pages:

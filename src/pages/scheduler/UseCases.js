@@ -31,7 +31,7 @@ class UseCases extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    We have created below a list of use cases and the respective solutions and best way practices.
+                    We have created below a list of use cases, the respective solutions and best practices.
                 </Typography>
 
                 <Typography id={first.id} variant={'title'}>
@@ -53,8 +53,8 @@ class UseCases extends React.Component {
                 <Typography variant={'p'}>
                     Let's first create the job. For this job, we do not specify any tag or trigger (since it is
                     run-once)
-                    and also, we have to create a configuration for the cluster since we can not terminate default ETL
-                    cluster.
+                    and also. We have to create a configuration for the cluster since we cannot terminate default ETL
+                    cluster (general cluster).
                 </Typography>
                 <Typography variant={'p'}>
                     We proceed to create this job:
@@ -77,16 +77,16 @@ class UseCases extends React.Component {
                     we also do not want to have any tag.
                 </Typography>
                 <Typography variant={'p'}>
-                    Since the two pipelines take about one hour and a half to finish in the general cluster, then we
+                    Since the two pipelines take about one hour and a half to finish in the general cluster, we
                     create the same instances as the default cluster. That means, we want a master node of type
                     m4.2xlarge and four core nodes of type m4.2xlarge as well.
                     We then move on to Spot Options, where we set Defined Duration to 120 minutes (because it will not
                     take more than two hours), set a Timeout Duration of 15 minutes and On Timeout Action to Terminate
-                    Cluster, because we do not want to run this at all cost.
+                    Cluster, because we do not want to run this at all costs.
                 </Typography>
                 <Typography variant={'p'}>
                     We usually want to leave EMR to the default one because that is the compatible version with
-                    Java and other libraries as well. The final look of the cluster will be:
+                    Java and other libraries as well. This is what the cluster looks like:
                 </Typography>
                 <Typography variant={'p'}>
                     <img src={exampleOneClusterConfig}/>
@@ -104,8 +104,8 @@ class UseCases extends React.Component {
                         <li>Processing importers - the pipeline where we process all files that are in our data lake.
                         </li>
                     </ol>
-                    We know for sure that Importer Pipeline will finish, but Processing Importers might fail because
-                    there is a lot of data to process. We want to first try doing this in the same cluster, but if we
+                    We know for sure that the Importer Pipeline will finish, but Processing Importers might fail because
+                    there is a lot of data to process. We want to try doing this in the same cluster first, and if we
                     can't, we want to do the second task in a bigger cluster.
                 </Typography>
                 <Divider/>
@@ -118,7 +118,7 @@ class UseCases extends React.Component {
                     We create two jobs with these tasks:
                     <ol>
                         <li>First job: two pipelines (Importer pipeline and Processing importers)</li>
-                        <li>Second job: one pipeline (Processing importers) that has to be run when the first one
+                        <li>Second job: one pipeline (Processing importers) that must be run when the first one
                             fails.
                         </li>
                     </ol>
@@ -129,10 +129,10 @@ class UseCases extends React.Component {
                     <img src={exampleTwoFirstJob}/>
                 </Typography>
                 <Typography variant={'p'}>
-                    Then we move on to create the modify the clusters for each of these tasks. The Xenos: Standardized
+                    Then we move on to modify the clusters for each of these tasks. The Xenos: Standardized
                     Output cluster has again, same instances as general cluster (four m4.2xlarge instances), while
                     Example 2: 8 core cluster has eight m4.2xlarge instances, which is double the processing power
-                    of the general (or Xenos: Standardized Output) cluster. The configurations look as below:
+                    of the general (or Xenos: Standardized Output) cluster. These are the configurations:
                 </Typography>
                 <Typography variant={'p'}>
                     <img src={exampleTwoFirstCluster}/>
