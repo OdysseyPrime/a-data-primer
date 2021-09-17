@@ -136,6 +136,10 @@ const routes = [
                 id: PAGES.VISUAL_DATA_HUB.MODULE_JSON_CONFIG
             },
             {
+                display: 'Ensuring Data Append',
+                id: PAGES.VISUAL_DATA_HUB.ENSURING_DATA_APPENDING
+            },
+            {
                 display: 'Plain Values Dictionary',
                 id: PAGES.VISUAL_DATA_HUB.PLAIN_VALUES_DICTIONARY,
                 children: [
@@ -148,10 +152,6 @@ const routes = [
                         id: 'overcoming-the-issue'
                     }
                 ]
-            },
-            {
-                display: 'Ensuring Data Append',
-                id: PAGES.VISUAL_DATA_HUB.ENSURING_DATA_APPENDING
             },
             {
                 display: 'Querying S3 data on Athena',
