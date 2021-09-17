@@ -19,7 +19,7 @@ class PlainValuesDictionary extends React.Component {
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Plain Values Dictionary
+                    {section.display}
                     <Divider/>
                 </Typography>
 
@@ -47,9 +47,9 @@ class PlainValuesDictionary extends React.Component {
                             schema is loaded from our importer module (cache) and not directly from the file.
                         </li>
 
-                        <li>If the parquet’s column type is updated, for example columnA, INTEGER -> STRING and the
-                            importer in platform is not hard reloaded, then when running the pipeline, the error will
-                            occur known as Plain Values Dictionary.
+                        <li>If the parquet’s column type is updated, for example columnA, INTEGER → STRING and the
+                            importer in platform is not hard reloaded, then the Plain Values Dictionary error will pop up
+                            when running the pipeline.
                         </li>
                     </ol>
                 </Typography>
@@ -64,7 +64,7 @@ class PlainValuesDictionary extends React.Component {
                         <li>Hard-refreshing the importer - this creates another request to clean cache and get the schema
                             content again.<Typography><img src={PVDHardReload}/></Typography></li>
                         <li>Removing the schema from the JSON Configuration module - this automatically loads everything
-                            the original file schema contains.<Code>"schema": []</Code></li>
+                            the original dataset schema contains.<Code>"schema": []</Code></li>
                     </ul>
                 </Typography>
 

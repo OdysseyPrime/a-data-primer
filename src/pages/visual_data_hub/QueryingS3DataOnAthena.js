@@ -21,12 +21,12 @@ const styles = () => ({
 
 class QueryingS3DataOnAthena extends React.Component {
     render() {
-        const {} = this.props
+        const {section} = this.props
 
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Querying S3 Data on Athena
+                    {section.display}
                     <Divider/>
                 </Typography>
 
@@ -36,18 +36,20 @@ class QueryingS3DataOnAthena extends React.Component {
                 </Typography>
 
                 <Typography>
-                    <li>
-                        AWS S3: is an object storage service that offers industry-leading scalability,
-                        data availability, security, and performance.
-                    </li>
-                    <li>
-                        AWS Glue: AWS Glue is a serverless data integration service that makes it easy to discover,
-                        prepare, and combine data for analytics, machine learning, and application development.
-                    </li>
-                    <li>
-                        AWS Athena: Amazon Athena is an interactive query service that makes it easy to analyze data
-                        in Amazon S3 using standard SQL.
-                    </li>
+                    <ol>
+                        <li>
+                            AWS S3: is an object storage service that offers industry-leading scalability,
+                            data availability, security, and performance.
+                        </li>
+                        <li>
+                            AWS Glue: AWS Glue is a serverless data integration service that makes it easy to discover,
+                            prepare, and combine data for analytics, machine learning, and application development.
+                        </li>
+                        <li>
+                            AWS Athena: Amazon Athena is an interactive query service that makes it easy to analyze data
+                            in Amazon S3 using standard SQL.
+                        </li>
+                    </ol>
                 </Typography>
 
                 <Typography>We want to start off by finding the S3 folder on our data-lake. Let us assume we want

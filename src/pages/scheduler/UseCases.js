@@ -26,7 +26,7 @@ class UseCases extends React.Component {
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Use Cases
+                    {section.display}
                     <Divider/>
                 </Typography>
 
@@ -52,8 +52,7 @@ class UseCases extends React.Component {
                 <Divider/>
                 <Typography variant={'p'}>
                     Let's first create the job. For this job, we do not specify any tag or trigger (since it is
-                    run-once)
-                    and also. We have to create a configuration for the cluster since we cannot terminate default ETL
+                    run-once). We also have to create a cluster configuration since we cannot terminate default ETL
                     cluster (general cluster).
                 </Typography>
                 <Typography variant={'p'}>
@@ -78,14 +77,14 @@ class UseCases extends React.Component {
                 </Typography>
                 <Typography variant={'p'}>
                     Since the two pipelines take about one hour and a half to finish in the general cluster, we
-                    create the same instances as the default cluster. That means, we want a master node of type
+                    create the same instances configuration as the default cluster. That means, we want a master node of type
                     m4.2xlarge and four core nodes of type m4.2xlarge as well.
                     We then move on to Spot Options, where we set Defined Duration to 120 minutes (because it will not
                     take more than two hours), set a Timeout Duration of 15 minutes and On Timeout Action to Terminate
                     Cluster, because we do not want to run this at all costs.
                 </Typography>
                 <Typography variant={'p'}>
-                    We usually want to leave EMR to the default one because that is the compatible version with
+                    We usually want to leave EMR version to the default one because that is the compatible version with
                     Java and other libraries as well. This is what the cluster looks like:
                 </Typography>
                 <Typography variant={'p'}>
@@ -146,10 +145,11 @@ class UseCases extends React.Component {
                     {toKeepInMind.display}
                 </Typography>
                 <Typography variant={'p'}>
+                    Some important points to keep in mind:
                     <ul>
                         <li>A cluster in scheduler defines cluster configurations and not clusters.</li>
-                        <li>A new job means a new cluster, even if you refer the same cluster.</li>
-                        <li>Pipeline trigger is not dependent on the cluster.</li>
+                        <li>A new job means a new cluster, even if you refer the same cluster configuration (except General Cluster).</li>
+                        <li>Pipeline trigger is not dependent on the cluster which you run the pipeline.</li>
                     </ul>
                 </Typography>
             </Fragment>

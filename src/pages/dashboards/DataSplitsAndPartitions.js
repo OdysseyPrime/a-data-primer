@@ -74,9 +74,11 @@ class DataSplitsAndPartitions extends React.Component {
 
                 <Typography variant={'p'}>
                     This means that every time you require a dashboard, Presto, which is our query engine will try
-                    to combine all of these files and give you a visual display in dashboards. In this case, 5 partitions
-                    are easy to handle (depending on the size), but if there were more, then overhead is created in
-                    proportion with the number of partitions.
+                    to combine all of these files and give you a visual display in dashboards.
+                </Typography>
+                <Typography variant={'p'}>
+                    In this case, 5 partitions are easy to handle (depending on the size), but if there were more,
+                    then overhead is created in proportion with the number of partitions.
                 </Typography>
 
                 <Typography variant={'p'}>
@@ -95,8 +97,7 @@ class DataSplitsAndPartitions extends React.Component {
                 <Typography variant={'p'}>
                     Calculating the total size, we
                     get 502 * 2.5 MB = 1255 MB. As we can tell, the data size is quite big, but another problem with
-                    this
-                    data set is that it is split in 500 parts. For Presto to collect all of the partitions,
+                    this data set is that it is split in 500 parts. For Presto to collect all of the partitions,
                     it needs time and processing power.
                 </Typography>
 
@@ -111,6 +112,14 @@ class DataSplitsAndPartitions extends React.Component {
                         <li>Partition the data from a column that is frequently used while filtering.</li>
                     </ol>
                 </Typography>
+
+                <Typography variant={'p'}>
+                    The final conclusion is that knowing the output dataset size, you must set splits to:
+                </Typography>
+
+                <Code>
+                    datasetSize (in MB) / 128
+                </Code>
 
                 <Typography id={repartition.id} variant={'title'}>
                     {repartition.display}
@@ -149,9 +158,16 @@ class DataSplitsAndPartitions extends React.Component {
                 </Typography>
                 <Typography variant={'p'}>
                     Partition by is the database process where very large tables are divided into multiple smaller parts.
-                    This process is a two-edged sword, since if used correctly, it immensely increases the performance
-                    because it enables Spark not to do a full scan of all the data and if used incorrectly, it generates
-                    a dozen of partitions inside a dozen of objects.
+                    This process is a two-edged sword, since:
+                    <ol>
+                        <li>
+                            If used correctly, it immensely increases the performance because it enables Spark not to
+                            do a full scan of all the data.
+                        </li>
+                        <li>
+                            If used incorrectly, it generates a dozen of partitions inside a dozen of objects.
+                        </li>
+                    </ol>
                 </Typography>
 
                 <Typography variant={'p'}>

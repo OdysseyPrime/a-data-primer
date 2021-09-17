@@ -28,7 +28,7 @@ class Clusters extends React.Component {
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Clusters
+                    {section.display}
                     <Divider/>
                 </Typography>
                 <Typography variant={'p'}>
@@ -70,8 +70,7 @@ class Clusters extends React.Component {
                             AWS instances are high on demand, chances are very likely that your instances will be taken
                             out after this duration.
                         </li>
-                        <li>Timeout duration: the number of minutes that you take an action specified by On Timeout
-                            action.
+                        <li>Timeout duration: the number of minutes after which you take an On Timeout action.
                         </li>
                         <li>Timeout action: the action to take after minutes specified by Timeout Duration have passed.
                             Can be:
@@ -83,7 +82,7 @@ class Clusters extends React.Component {
                     </ol>
                     In our case, the configurations that we have set in the image above make a request to get a
                     cluster that has 3 hours (can be more if instances are not high on demand) up time. If the
-                    instances cannot be provisioned, then terminate the cluster.
+                    instances cannot be provisioned for 60 minutes, then terminate the cluster.
                 </Typography>
 
                 <Typography id={bootstrapOptions.id} variant={'title'}>
@@ -118,7 +117,7 @@ class Clusters extends React.Component {
                             You can use task nodes to add power to perform parallel computation tasks on data.
                         </li>
                     </ol>
-                    Below we will list some examples that can help you understand the concept of nodes better by
+                    Below we will list some examples that help you understand the concept of nodes better by
                     scheduler configurations.
                 </Typography>
                 <Divider/>
@@ -159,8 +158,8 @@ class Clusters extends React.Component {
                     32GB of RAM) and d2.8xlarge (has 36 vCPUs, 244GB of RAM and 759GB of HDD storage). The target
                     capacity of one will be filled with the cheapest available instance. Precisely, we will
                     first look to spin up the cluster with one core m4.2xlarge instance, if that is not available, then
-                    we switch to d2.8xlarge, if that is not available, then the cluster fails because of not being able
-                    to provide the required instances.
+                    we switch to d2.8xlarge, if that is not available, then the cluster bootstrapping fails because of
+                    not being able to provide the required instances.
                 </Typography>
                 <Divider/>
             </Fragment>

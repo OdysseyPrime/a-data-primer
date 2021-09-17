@@ -61,12 +61,36 @@ class YourFirstPipeline extends React.Component {
                 </Code>
 
                 <Typography variant={'p'}>
-                    In this specific case, client is Xenos we export to:
+                    In this specific case, since the client is Xenos, the final path would be:
                 </Typography>
 
                 <Code>
-                    s3a://prime-data-lake/production/xenos/vdh/standardized_output/raw/klantenteller/
+                    s3a://prime-data-lake/production/xenos/vdh/anything/
                 </Code>
+
+                <Typography variant={'p'}>
+                    When creating pipelines, it is always recommended to use Parquet as exporting module because of
+                    it's capabilities. Parquet is designed as a columnar storage format to support complex data processing.
+                </Typography>
+
+                <Typography variant={'p'}>
+                    Apache Parquet is a self-describing data format that embeds the schema or structure within the data itself.
+                </Typography>
+
+                <Typography variant={'p'}>
+                    Parquet performance, when compared to a format like CSV, offers compelling benefits in terms of cost,
+                    efficiency, and flexibility.
+                </Typography>
+
+                <Typography variant={'p'}>
+                    If you are creating testing pipelines, it is recommended to either use Default Project, or create
+                    your own project. Make sure to clean your pipelines and projects after your work is done.
+                </Typography>
+
+                <Typography variant={'p'}>
+                    At the moment of writing this, we do not automatically clean pipelines or the data it creates,
+                    therefore it is best for them to be handled by the creator.
+                </Typography>
             </Fragment>
         )
     }

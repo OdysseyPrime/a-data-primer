@@ -29,7 +29,7 @@ class GlobPatterns extends React.Component {
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Glob Patterns
+                    {section.display}
                     <Divider/>
                 </Typography>
 

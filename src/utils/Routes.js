@@ -102,20 +102,6 @@ const routes = [
                 display: 'Your First Pipeline',
             },
             {
-                display: 'Plain Values Dictionary',
-                id: PAGES.VISUAL_DATA_HUB.PLAIN_VALUES_DICTIONARY,
-                children: [
-                    {
-                        display: 'What is Plain Values Dictionary?',
-                        id: 'what-is-pvd-error'
-                    },
-                    {
-                        display: 'Overcoming the issue',
-                        id: 'overcoming-the-issue'
-                    }
-                ]
-            },
-            {
                 display: 'Glob Patterns',
                 id: PAGES.VISUAL_DATA_HUB.GLOB_PATTERNS,
                 children: [
@@ -150,15 +136,29 @@ const routes = [
                 id: PAGES.VISUAL_DATA_HUB.MODULE_JSON_CONFIG
             },
             {
-                display: 'Querying S3 data on Athena',
-                id: PAGES.VISUAL_DATA_HUB.QUERYING_S3_DATA_ON_ATHENA
+                display: 'Plain Values Dictionary',
+                id: PAGES.VISUAL_DATA_HUB.PLAIN_VALUES_DICTIONARY,
+                children: [
+                    {
+                        display: 'What is Plain Values Dictionary?',
+                        id: 'what-is-pvd-error'
+                    },
+                    {
+                        display: 'Overcoming the issue',
+                        id: 'overcoming-the-issue'
+                    }
+                ]
             },
             {
                 display: 'Ensuring Data Append',
                 id: PAGES.VISUAL_DATA_HUB.ENSURING_DATA_APPENDING
             },
             {
-                display: 'Processing JSON data',
+                display: 'Querying S3 data on Athena',
+                id: PAGES.VISUAL_DATA_HUB.QUERYING_S3_DATA_ON_ATHENA
+            },
+            {
+                display: 'Processing JSON Data',
                 id: PAGES.VISUAL_DATA_HUB.PROCESSING_JSON_DATA,
                 children: [
                     {
@@ -186,8 +186,8 @@ const routes = [
                         id: 'exporting-to-data-lake'
                     },
                     {
-                        display: 'Querying',
-                        id: 'querying'
+                        display: 'Dashboard Creation',
+                        id: 'dashboard-creation'
                     }
                 ]
             },
@@ -220,6 +220,10 @@ const routes = [
                     {
                         display: 'Pipeline Module',
                         id: 'pipeline-module'
+                    },
+                    {
+                        display: 'Conclusion',
+                        id: 'conclusion'
                     }
                 ]
             }

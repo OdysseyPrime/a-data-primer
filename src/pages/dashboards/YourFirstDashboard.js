@@ -57,7 +57,7 @@ class YourFirstDashboard extends React.Component {
                 </Code>
 
                 <Typography variant={'p'}>
-                    To find projectId and pipelineId, we have to break down our platform uri of the pipeline we
+                    To find projectId and pipelineId, we have to break down our platform uri of the pipeline that we
                     have run, in this case:
                 </Typography>
 

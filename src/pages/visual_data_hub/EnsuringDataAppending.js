@@ -12,12 +12,12 @@ const styles = () => ({
 
 class EnsuringDataAppending extends React.Component {
     render() {
-        const {} = this.props
+        const {section} = this.props
 
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Ensuring Data Appending
+                    {section.display}
                     <Divider/>
                 </Typography>
 
@@ -28,8 +28,9 @@ class EnsuringDataAppending extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    Since the input is not dependent on us, schema might eventually change. Meaning that, a column
-                    that we expect to be string in parquet importer, is integer, thus it cannot be parsed.
+                    Since the input is not dependent on us (usually on the client), schema might eventually change.
+                    Meaning that, a column that we expect to be string in parquet importer, is integer, thus it
+                    cannot be parsed.
                 </Typography>
 
                 <Typography variant={'p'}>
@@ -81,7 +82,7 @@ class EnsuringDataAppending extends React.Component {
                     By doing this, we skip a cleaned file which results to less data. But the problem with this approach
                     is that if the input schema changes once, then the wildcard will mess up. By schema change, we mean
                     if another column is added which we do not expect or if a type changes. The first case, will result
-                    in a bad combination, while the second one will result in plain values dictionary.
+                    in a bad combination, while the second one will result in schema merging errors.
                 </Typography>
 
                 <Typography>

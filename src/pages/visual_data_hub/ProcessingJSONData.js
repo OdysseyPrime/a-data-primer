@@ -22,7 +22,7 @@ class ProcessingJSONData extends React.Component {
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Processing JSON Data
+                    {section.display}
                     <Divider/>
                 </Typography>
 
@@ -40,6 +40,11 @@ class ProcessingJSONData extends React.Component {
                     hit a REST API endpoint, there are credentials to be provided. We do not worry about this, we
                     assume we have the data ready and it looks like this (almost always, REST API endpoints give a
                     response that starts with a result key):
+                </Typography>
+                <Typography variant={'p'}>
+                    Usually, when we want to hit a REST API endpoint, there are credentials to be provided. We do not
+                    worry about this, we assume we have the data ready and it looks like this (almost always, REST API
+                    endpoints give a response that starts with a result key):
                 </Typography>
 
                 <Code>
@@ -90,7 +95,7 @@ class ProcessingJSONData extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    Since we now have a JSON, we can explode the array to get multiple objects into rows.
+                    Now that we have a JSON, we can explode the array to get multiple objects into rows.
                 </Typography>
 
                 <Code>

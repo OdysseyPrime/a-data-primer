@@ -14,7 +14,7 @@ class Intro extends React.Component {
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Dashboards
+                    {section.display}
                     <Divider/>
                 </Typography>
                 <Typography variant='p'>

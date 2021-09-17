@@ -13,12 +13,12 @@ const styles = () => ({
 
 class ModuleJSONConfig extends React.Component {
     render() {
-        const {} = this.props
+        const {section} = this.props
 
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Module JSON Config
+                    {section.display}
                     <Divider/>
                 </Typography>
 
@@ -49,6 +49,8 @@ class ModuleJSONConfig extends React.Component {
                 </Typography>
                 <Typography variant={'p'}>
                     Then it is guaranteed that no API call will be made, thus leaving everything as is in the module.
+                    API calls represent specific operations that your client applications can invoke at runtime to perform
+                    tasks.
                 </Typography>
                 <Typography variant={'p'}>
                     This is a very nice workaround that you can do when you want to load a big data set for example.
@@ -61,7 +63,8 @@ class ModuleJSONConfig extends React.Component {
                 <Code>s3://prime-data-lake/production/pos/</Code>
                 <Typography variant={'p'}>
                     This way we are using the full data set with a sample of one partition which is loaded super-fast
-                    through VDH. We avoid scanning through the full table, which saves a lot of time.
+                    through VDH and we avoid scanning through the full table, which saves a lot of time. Right now, we
+                    also have the Sampled Path in the importer user interface which does the same thing.
                 </Typography>
 
                 <Typography variant={'p'}>
@@ -69,7 +72,7 @@ class ModuleJSONConfig extends React.Component {
                     <ul>
                         <li>The optimize flag: set to true, allows your data to be exported with a data size that you
                             specify, in
-                            our case, Spark will try to export a partition to 128MB.
+                            our case, Spark will try to export a partition to a fixed size of 128MB.
                             <Code> "optimize": &#123;
                                 "enabled": true,
                                 "size": 128,
@@ -79,7 +82,7 @@ class ModuleJSONConfig extends React.Component {
                             </Code>
                         </li>
                         <li>
-                            The importer SFTP flag: enables SFTP for an importer, thus allowing to dynamically load
+                            The importer SFTP flag: enables SFTP connection for an importer, thus allowing to dynamically load
                             data from an SFTP server by providing credentials, in our case, we are reading data from
                             a test site where username is demo and password is password on port 22.
                             <Code>

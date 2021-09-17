@@ -18,6 +18,7 @@ class DataSplitsAndPartitions extends React.Component {
 
         const yourOwnField = section.children[0];
         const pipelineModule = section.children[1];
+        const conclusion = section.children[2];
 
         return (
             <Fragment>
@@ -33,7 +34,7 @@ class DataSplitsAndPartitions extends React.Component {
                 <Typography variant={'p'}>
                     Let us assume the following use case, we have a product_group_code and a product_group_name, the
                     containing of which is not to our interest. We need to display in the dashboard a
-                    concatenation of those two;
+                    concatenation of those two.
                 </Typography>
 
                 <Typography variant={'p'}>
@@ -96,8 +97,29 @@ class DataSplitsAndPartitions extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    The concatenation as a calculation is cheap, thus it is not time consuming. If we take into
-                    consideration some other examples, like aggregation, then the situation gets a lot worse.
+                    The concatenation as a calculation is cheap, thus it is not time consuming. The case might not be
+                    the same if we have filters and aggregations.
+                </Typography>
+
+                <Typography id={conclusion.id} variant={'title'}>
+                    {conclusion.display}
+                </Typography>
+
+                <Typography variant={'p'}>
+                    Having gone through the explanation, you might have come to understand that doing calculations on
+                    the fly is a very heavy process.
+                </Typography>
+
+                <Typography variant={'p'}>
+                    We want to avoid by any chance these calculations and stick to pipeline ones if possible.
+                    A dashboard load is like running a small pipeline right when the button is clicked, while if
+                    we have the calculations already done in the pipeline, results are easily accessible by Presto
+                    through S3.
+                </Typography>
+
+                <Typography variant={'p'}>
+                    An analogy of that: think of how fast would Data Overview show data if everything was in the
+                    imported data and no calculations were done after importing.
                 </Typography>
             </Fragment>
         )

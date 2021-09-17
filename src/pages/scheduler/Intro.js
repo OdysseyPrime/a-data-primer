@@ -14,7 +14,7 @@ class Intro extends React.Component {
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Getting Started
+                    {section.display}
                     <Divider/>
                 </Typography>
                 <Typography variant={'p'}>
@@ -30,16 +30,21 @@ class Intro extends React.Component {
                 </Typography>
                 <Typography variant={'p'}>
                     Since the very beginning of VDH release, we have found use of it in almost every thing we have done,
-                    from constructing test pipelines to complex pipelines that do big data processing and heavy calculations.
-                    As time passed, we found the need to run specific pipelines on a timely basis. These specific can
+                    from constructing test pipelines to complex pipelines that do big data processing and heavy
+                    calculations.
+                    As time passed, we found the need to run specific pipelines on a timely basis. These can
                     be for instance pipelines that process weekly client uploads.
                 </Typography>
                 <Typography variant={'p'}>
                     Running these data processing pipelines was a must, and a solution had to be found.
                     There were some tools out there which we started to utilize, but the ones that fit us the most were:
                     <ol>
-                        <li>Apache Airflow: a service provided by the same creator of Spark.</li>
-                        <li>Terraform: a service provided by Hashicorp that uses code as infrastructure concept.</li>
+                        <li>Apache Airflow: (or simply Airflow) is a platform to programmatically author,
+                            schedule, and monitor workflows..
+                        </li>
+                        <li>Terraform: is an open-source infrastructure as code software tool that provides a consistent
+                            CLI workflow to manage hundreds of cloud services.
+                        </li>
                     </ol>
                     Both tools were very useful, but still there were limitations when it came to the
                     interconnection with our platform. For example, scheduling Terraform in Apache Airflow was not
@@ -51,17 +56,12 @@ class Intro extends React.Component {
                 </Typography>
                 <Typography variant={'p'}>
                     The best solution was to create our own, isolated and unique feature that enables the run of EMR
-                    steps in a free-style manner. This allowed the eventual removal of two external services mentioned
+                    steps in a free-style manner. This made possible the eventual removal of two external services
+                    mentioned
                     above and have everything inside the platform, which is always our goal.
                 </Typography>
                 <Typography variant={'p'}>
-                    Scheduler is made of three parts:
-                    <ol>
-                        <li>Runs</li>
-                        <li>Jobs</li>
-                        <li>Clusters</li>
-                    </ol>
-                    These concepts will be elaborated in the coming next section.
+                    Scheduler is made of three parts: Runs, Jobs and Clusters. These concepts will be elaborated later.
                 </Typography>
                 <Typography variant='p'>
                     This service contains the underlying pages:

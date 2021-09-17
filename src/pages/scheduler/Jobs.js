@@ -38,7 +38,7 @@ class Jobs extends React.Component {
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Jobs
+                    {section.display}
                     <Divider/>
                 </Typography>
 
@@ -53,7 +53,10 @@ class Jobs extends React.Component {
                 <Typography variant={'p'}>
                     It can be convenient to categorize your AWS resources in different ways; for example, by purpose,
                     owner, or environment. You can achieve this in Amazon EMR by assigning custom metadata to your
-                    Amazon EMR clusters using tags. A tag consists of a key and a value, both of which you define.
+                    Amazon EMR clusters using tags.
+                </Typography>
+                <Typography variant={'p'}>
+                    A tag consists of a key and a value, both of which you define.
                     For Amazon EMR, the cluster is the resource-level that you can tag.
                 </Typography>
                 <Typography variant={'p'}>
@@ -63,27 +66,24 @@ class Jobs extends React.Component {
                     <img src={tagImage}/>
                 </Typography>
                 <Typography variant={'p'}>
-                    Beside the custom made, there are quite some tags which are set built-in, so we can exactly track
+                    Beside the custom made, there are some tags which are set by default (built-in), so we can exactly track
                     down the costs through AWS Billing service.
                 </Typography>
                 <Typography variant={'p'}>
-                    For example, if we are to check Makro's Price Run tags through EMR, we can find that:
+                    For example, if we are to check Makro's Price Run Cluster tags through EMR, we can find that there
+                    are four built-in tags applied to this cluster by platform, even though we did not specify one on
+                    our own.
                 </Typography>
                 <Typography variant={'p'}>
                     <img src={priceRunTags}/>
                 </Typography>
-                <Typography variant={'p'}>
-                    there are four built-in tags applied to this cluster by platform, even though we did not specify
-                    one on our own.
-                </Typography>
-
                 <Typography id={triggers.id} variant={'title'}>
                     {triggers.display}
                 </Typography>
                 <Typography variant={'p'}>
                     When scheduling, we have two options to set as triggers:
                     <ol>
-                        <li>Time Based Triggers: triggered on a periodic or non-periodic time manner that we set.</li>
+                        <li>Time Based Triggers: triggered on a periodic or non-periodic time manner.</li>
                         <li>On State Change: triggered when the state of a pipeline or job is changed. A pipeline or
                         job can have three states:
                             <ul>
@@ -136,16 +136,18 @@ class Jobs extends React.Component {
                 <Typography variant={'p'}>
                     To execute EMR steps in an orderly manner, we specify a list of tasks that are either:
                     <ol>
-                        <li>Pipeline Task: a pipeline constructed through VDH.</li>
-                        <li>Custom Spark Step: a custom pipeline constructed through external libraries.</li>
+                        <li>Pipeline Task: a pipeline constructed through Visual Data Hub.</li>
+                        <li>Custom Spark Step: a custom EMR step configuration that is ran through external libraries.</li>
                     </ol>
                     This list is then fed into a Job and is executed when triggers are activated.
                 </Typography>
                 <Typography variant={'p'}>
                     When creating a job that processes data into a dedicated cluster, and we specify tasks, we
-                    are enabled to choose an Action on Failure consequence. This means that we can decide either to
-                    keep the cluster alive when a step fails or keep running, depending on whether the steps are
-                    dependent on each other or not.
+                    are enabled to choose an Action on Failure consequence.
+                </Typography>
+                <Typography variant={'p'}>
+                    This means that we can decide either to keep the cluster alive when a step fails or keep running,
+                    depending on whether the steps are dependent on each other or not.
                 </Typography>
 
                 <Typography variant={'p'}>
