@@ -229,6 +229,58 @@ const routes = [
             }
         ]
     },
+    {
+        display: '4. Data Lifecycle',
+        id: PAGES.DATA_LIFECYCLE.ID,
+        children: [
+            {
+                display: 'Data Onboarding',
+                id: 'data-onboarding'
+            },
+            {
+                display: 'Data Processing',
+                id: 'data-processing',
+                children: [
+                    {
+                        display: 'Data Quality Assurance',
+                        id: 'data-quality-assurance'
+                    }
+                ]
+            },
+            {
+                display: 'Data Delivery',
+                id: 'data-delivery',
+                children: [
+                    {
+                        display: 'Platform Modules',
+                        id: 'platform-modules'
+                    },
+                    {
+                        display: 'Machine Learning Solutions',
+                        id: 'ml-solutions',
+                    },
+                    {
+                        display: 'Deliverables',
+                        id: 'deliverables'
+                    }
+                ]
+            },
+            {
+                display: 'Overview',
+                id: 'overview',
+                children: [
+                    {
+                        display: 'Platform and S3 Linkage',
+                        id: 'platform-and-s3-linkage'
+                    },
+                    {
+                        display: 'Standardized Output Graph',
+                        id: 'standardized-output-graph',
+                    }
+                ]
+            }
+        ]
+    }
 ]
 
 const format = (which) => {

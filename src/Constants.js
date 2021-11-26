@@ -22,6 +22,13 @@ module.exports = {
             YOUR_FIRST_DASHBOARD: 'your-first-dashboard',
             DATA_SPLITS_AND_PARTITIONS: 'data-splits-and-partitions',
             PIPELINE_VS_ON_THE_FLY: 'pipeline-vs-on-the-fly'
+        },
+        DATA_LIFECYCLE: {
+            ID: 'data-lifecycle',
+            DATA_ONBOARDING: 'data-onboarding',
+            DATA_PROCESSING: 'data-processing',
+            DATA_DELIVERY: 'data-delivery',
+            OVERVIEW: 'overview'
         }
     },
 }

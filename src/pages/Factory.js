@@ -7,6 +7,7 @@ import routes from 'utils/Routes';
 import Scheduler from './scheduler/Scheduler';
 import VisualDataHub from "pages/visual_data_hub/VisualDataHub";
 import Dashboards from "pages/dashboards/Dashboards";
+import DataLifeCycle from "pages/data_lifecycle/DataLifeCycle";
 
 const styles = () => ({
     root: {}
@@ -69,6 +70,8 @@ class Factory extends React.Component {
                 return <VisualDataHub breadcrumbs={breadcrumbs}/>
             case PAGES.DASHBOARDS.ID:
                 return <Dashboards breadcrumbs={breadcrumbs}/>
+            case PAGES.DATA_LIFECYCLE.ID:
+                return <DataLifeCycle breadcrumbs={breadcrumbs}/>
             default:
                 return <Home/>
         }
