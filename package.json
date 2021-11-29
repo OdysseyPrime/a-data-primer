@@ -1,6 +1,6 @@
 {
   "homepage": "https://OdysseyPrime.github.io/a-data-primer",
-  "name": "prime-workshops",
+  "name": "a-data-primer",
   "version": "0.1.0",
   "description": "PRIME Workshops",
   "main": "src/index.js",
