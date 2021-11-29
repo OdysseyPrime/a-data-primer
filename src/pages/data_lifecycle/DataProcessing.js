@@ -24,12 +24,12 @@ class DataOnboarding extends React.Component {
 
                 <Typography variant={'p'}>
                     The process of transforming and potentially combining the raw files into new, structured output is
-                    data processing. The output file must be a Standard Output, meaning that it must contain a strict
-                    and validated data structure.
+                    data called processing. The output file must be a Standard Output, meaning that it must contain a
+                    strict and validated data structure.
                 </Typography>
 
                 <Typography variant={'p'}>
-                    The data processing stage can be divided three parts, the creation of mapper files, the creation
+                    The data processing stage can be divided into three parts, the creation of mapper files, the creation
                     of point of sale foundation and data quality assurance checks.
                 </Typography>
 
@@ -65,9 +65,9 @@ class DataOnboarding extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    When we start making these processing, we must create a new project on Standardized Output called
-                    Retail Template which (varies from clients) holds the creation of Point of Sale, Receipt Data and
-                    Mapper Files.
+                    In order to do this processing, we must start off by creating a new project on Standardized Output
+                    called Retail Template which (varies from clients) holds the creation of Point of Sale, Receipt Data
+                    and Mapper Files.
                 </Typography>
 
                 <Typography variant={'p'}>
@@ -95,6 +95,17 @@ class DataOnboarding extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
+                    When it comes to the creation of point of sale and receipt data, the partition by technique is used,
+                    by using this method, we make sure that data is correctly split into years, without having to hard
+                    code values.
+                </Typography>
+
+                <Typography variant={'p'}>
+                    This also avoids data mistakes that usually happen when there is more data than expected (we want to
+                    work with 2021 data, and suddenly there is a 2020 somewhere).
+                </Typography>
+
+                <Typography variant={'p'}>
                     Once this foundation is in place, then comes the concern of versioning; versioning is the process of
                     creating back-up data which is accessible to users at any time, making it possible to check previous
                     work. In our current ecosystem, we have two ways of creating versions:
@@ -113,16 +124,10 @@ class DataOnboarding extends React.Component {
 
                 <Typography variant={'p'}>
                     We use platform versioning because we want to keep our way of working as isolated as possible. In
-                    order for each data to be available at any time, we use latest as latest batch of data together
-                    with date created. For example, a store mapper’s export paths should be:
+                    order for each data to be available at any time, we use the key word latest as latest batch of data
+                    together with date created. For example, a store mapper’s export paths should be:
                     <Code>/store_mapper/latest and /store_mapper/2021_01_01/</Code> this enables us the possibility
                     to point to the latest data and also have access to a potential working batch.
-                </Typography>
-
-                <Typography variant={'p'}>
-                    Anyways, this policy should not be used on production ready files, meaning, if one file has no
-                    further processing then no latest version is needed. For example a dashboard importation does not
-                    need a latest version and neither a data quality assurance check.
                 </Typography>
 
                 <Typography variant={'p'}>

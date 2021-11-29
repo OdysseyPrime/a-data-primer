@@ -64,26 +64,22 @@ class DataOnboarding extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    If we were to take this into technical terms, raw client data would be
-                    <Code>s3://prime-client/data.csv</Code> and raw data would be
-                    <Code>s3://prime-data-lake/production/client/vdh/standardized_output/raw/data</Code>
-                    The .parquet postfix is not specified by the user because it is something that Spark handles for us.
+                    If we were to take this into technical terms, raw client data would be:
                 </Typography>
-
-                <Typography variant={'p'}>
-                    Client raw data in S3 looks like:
-                </Typography>
-
+                <Code>s3://prime-client/data.csv</Code>
                 <Typography variant={'p'}>
                     <img src={ClientS3RawImage}/>
                 </Typography>
 
                 <Typography variant={'p'}>
-                    And data lake raw data in S3 looks like:
+                    and raw data would be:
                 </Typography>
-
+                <Code>s3://prime-data-lake/production/client/vdh/standardized_output/raw/data</Code>
                 <Typography variant={'p'}>
                     <img src={S3RawImageSO}/>
+                </Typography>
+                <Typography variant={'p'}>
+                    The .parquet postfix is not specified by the user because it is something that Spark handles for us.
                 </Typography>
             </Fragment>
         )

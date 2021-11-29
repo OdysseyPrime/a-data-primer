@@ -14,11 +14,11 @@ class Home extends React.Component {
         return (
             <Fragment>
                 <Typography variant={'heading'}>
-                    Prime Workshops
+                    A Data Primer - A guidance to Prime way of data handling
                 </Typography>
 
                 <Typography variant={'p'}>
-                    Hello and welcome to PRIME Workshops, the place where knowledge is shared all over the team through
+                    Hello and welcome to A Data Primer, the place where knowledge is shared all over the team through
                     a neat and organized, well-documented page as this one.
                 </Typography>
 
@@ -42,7 +42,7 @@ class Home extends React.Component {
 
                 <Typography variant={'p'}>
                     This project is still in development and we are more than happy to any feedback related either
-                    to the UI or to the specific workshops. If you think you can contribute to this project, feel
+                    to the UI or to the specific topic. If you think you can contribute to this project, feel
                     free to pull this repository from Github and create merge requests after your correction(s) or
                     addition(s).
                 </Typography>

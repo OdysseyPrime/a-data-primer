@@ -25,7 +25,7 @@ class Intro extends React.Component {
                     leading to optimised and clear results.
                 </Typography>
                 <Typography variant='p'>
-                    This service contains the underlying pages:
+                    This guide contains the underlying pages:
                     <ol>
                         {section.children.map(next => <li key={next.id}>
                             <PageLink to={`/lecture/${next.id}/`}>{next.display}</PageLink>

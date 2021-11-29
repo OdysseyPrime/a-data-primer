@@ -6,7 +6,7 @@ const routes = [
         id: PAGES.HOME,
     },
     {
-        display: '1. Visual Data Hub',
+        display: 'Platform: Visual Data Hub',
         id: PAGES.VISUAL_DATA_HUB.ID,
         children: [
             {
@@ -86,7 +86,7 @@ const routes = [
         ]
     },
     {
-        display: '2. Dashboards',
+        display: 'Platform: Dashboards',
         id: PAGES.DASHBOARDS.ID,
         children: [
             {
@@ -142,7 +142,7 @@ const routes = [
         ]
     },
     {
-        display: '3. Scheduler',
+        display: 'Platform: Scheduler',
         id: PAGES.SCHEDULER.ID,
         children: [
             {
@@ -230,7 +230,7 @@ const routes = [
         ]
     },
     {
-        display: '4. Data Lifecycle',
+        display: 'Data Lifecycle',
         id: PAGES.DATA_LIFECYCLE.ID,
         children: [
             {
