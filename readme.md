@@ -1,6 +1,6 @@
 ### Prime Workshop
 
-Visit the page at: https://odysseyprime.github.io/prime-workshops/
+Visit the page at: https://odysseyprime.github.io/a-data-primer/
 
 ## Installation
 ```

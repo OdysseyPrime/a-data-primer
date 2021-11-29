@@ -12,7 +12,7 @@ module.exports = {
     output: {
         path: BUILD_DIR,
         filename: 'bundle.js',
-        publicPath: '/prime-workshops/'
+        publicPath: '/a-data-primer/'
     },
     module: {
         rules: [
@@ -60,7 +60,7 @@ module.exports = {
             filename: `${BUILD_DIR}/index.html`
         }),
         new webpack.DefinePlugin({
-            BASE_URL: JSON.stringify('/prime-workshops/')
+            BASE_URL: JSON.stringify('/a-data-primer/')
         })
     ]
 }
