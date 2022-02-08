@@ -29,6 +29,10 @@ module.exports = {
             DATA_PROCESSING: 'data-processing',
             DATA_DELIVERY: 'data-delivery',
             OVERVIEW: 'overview'
+        },
+        DEVELOPMENT: {
+            ID: 'development',
+            EXTRACT_TRANSFORM_LOAD: 'etl'
         }
     },
 }
