@@ -32,7 +32,8 @@ module.exports = {
         },
         DEVELOPMENT: {
             ID: 'development',
-            EXTRACT_TRANSFORM_LOAD: 'etl'
+            EXTRACT_TRANSFORM_LOAD: 'etl',
+            CODE_BASE_SETUP: 'code-base-setup'
         }
     },
 }

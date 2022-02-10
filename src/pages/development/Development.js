@@ -3,6 +3,7 @@ import {PAGES} from 'Constants';
 import Intro from "pages/development/Intro";
 import React from "react";
 import ETL from "pages/development/ExtractTransformLoad";
+import CodeBaseSetup from "pages/development/CodeBaseSetup";
 
 const styles = () => ({
     root: {},
@@ -24,6 +25,8 @@ class Development extends React.Component {
         switch (section.id) {
             case PAGES.DEVELOPMENT.EXTRACT_TRANSFORM_LOAD:
                 return <ETL {...props} />
+            case PAGES.DEVELOPMENT.CODE_BASE_SETUP:
+                return <CodeBaseSetup {...props} />
         }
 
         return <Intro {...props} />

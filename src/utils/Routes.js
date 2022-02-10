@@ -302,6 +302,28 @@ const routes = [
                         id: 'things-to-consider'
                     }
                 ]
+            },
+            {
+                display: 'Code Base Setup',
+                id: PAGES.DEVELOPMENT.CODE_BASE_SETUP,
+                children: [
+                    {
+                        display: 'Creating a Token',
+                        id: 'creating-a-token'
+                    },
+                    {
+                        display: 'Installing Source Tree',
+                        id: 'installing-source-tree'
+                    },
+                    {
+                        display: 'Hadoop Setup',
+                        id: 'hadoop-setup'
+                    },
+                    {
+                        display: 'Importing to IntelliJ',
+                        id: 'importing-to-intellij'
+                    }
+                ]
             }
         ]
     }

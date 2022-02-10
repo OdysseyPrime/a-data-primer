@@ -3,9 +3,6 @@ import React, {Fragment} from "react";
 import Typography from "presentations/Typography";
 import Divider from "presentations/Divider";
 import Code from "presentations/Code";
-import ETLModel from "assets/images/development/ETLmodel.png";
-import ETLInterceptor from "assets/images/development/ETLInterceptor.png";
-
 
 const styles = () => ({
     root: {},
@@ -25,6 +22,15 @@ class ExtractTransformLoad extends React.Component {
                 <Typography variant={'heading'}>
                     {section.display}
                     <Divider/>
+                </Typography>
+
+                <Typography>
+                    Requirements:
+
+                    <ul>
+                        <li>Access to PRIME Github</li>
+                        <li>Access to ETL repository in Github</li>
+                    </ul>
                 </Typography>
 
                 <Typography variant={'p'}>
