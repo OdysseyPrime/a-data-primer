@@ -286,24 +286,6 @@ const routes = [
         id: PAGES.DEVELOPMENT.ID,
         children: [
             {
-                display: 'ETL: Making a Module',
-                id: PAGES.DEVELOPMENT.EXTRACT_TRANSFORM_LOAD,
-                children: [
-                    {
-                        display: 'Registration',
-                        id: 'registration'
-                    },
-                    {
-                        display: 'Implementation',
-                        id: 'implementation'
-                    },
-                    {
-                        display: 'Things to Consider',
-                        id: 'things-to-consider'
-                    }
-                ]
-            },
-            {
                 display: 'Code Base Setup',
                 id: PAGES.DEVELOPMENT.CODE_BASE_SETUP,
                 children: [
@@ -322,6 +304,24 @@ const routes = [
                     {
                         display: 'Importing to IntelliJ',
                         id: 'importing-to-intellij'
+                    }
+                ]
+            },
+            {
+                display: 'ETL: Making a Module',
+                id: PAGES.DEVELOPMENT.EXTRACT_TRANSFORM_LOAD,
+                children: [
+                    {
+                        display: 'Registration',
+                        id: 'registration'
+                    },
+                    {
+                        display: 'Implementation',
+                        id: 'implementation'
+                    },
+                    {
+                        display: 'Things to Consider',
+                        id: 'things-to-consider'
                     }
                 ]
             }
