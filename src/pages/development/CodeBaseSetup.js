@@ -3,7 +3,10 @@ import React, {Fragment} from "react";
 import Typography from "presentations/Typography";
 import Divider from "presentations/Divider";
 import CBSApplicationConfig from "assets/images/development/CBSApplicationConfig.png"
-import ClientBucketsImage from "assets/images/data_lifecycle/data_lifecycle_listed_client_buckets.png";
+import CBSSourceTreeGif from "assets/images/development/CBSsourceTree.gif";
+import CBSTools from "assets/images/development/CBStools.png";
+import CBSAuth from "assets/images/development/CBSAuth.gif";
+import CBSIntelliConfig from "assets/images/development/CBSIntelliConfig.png";
 
 const styles = () => ({
     root: {},
@@ -62,7 +65,6 @@ class CodeBaseSetup extends React.Component {
                     on the Git repository hosting service.
                 </Typography>
 
-
                 <Typography variant={'p'}>
                     The official documentation from Github:
                     https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
@@ -113,12 +115,25 @@ class CodeBaseSetup extends React.Component {
                         <li>Then finish the procedure.</li>
                         <li>When asked for an SHH key, press 'No'.</li>
                     </ol>
+                </Typography>
 
+                <Typography variant={'p'}>
+                    This procedure looks like the images below:
+                </Typography>
+
+                <Typography variant={'p'}>
+                    <img src={CBSSourceTreeGif}/>
+                </Typography>
+
+                <Typography variant={'p'}>
                     This is all for the installation of Sourcetree. Now, let's set up the user.
+                </Typography>
 
+                <Typography variant={'p'}>
                     <ol>
                         <li>Click 'Add User' from main interface or click 'Tools' and 'Options', then 'Authentication'.
                         </li>
+                        <img src={CBSTools}/>
                         <li>Click the blue 'Add' label.</li>
                         <li>As 'Hosting Service', select Github.</li>
                         <li>As 'Host URL', leave the default one.</li>
@@ -135,7 +150,15 @@ class CodeBaseSetup extends React.Component {
                 </Typography>
 
                 <Typography variant={'p'}>
-                    Sourcetree is good to go now!
+                    This procedure looks like the images below:
+                </Typography>
+
+                <Typography variant={'p'}>
+                    <img src={CBSAuth}/>
+                </Typography>
+
+                <Typography variant={'p'}>
+                    The user is good to go now!
                 </Typography>
 
                 <Typography id={hadoop.id} variant={'title'}>
@@ -186,6 +209,7 @@ class CodeBaseSetup extends React.Component {
 
                     <ol>
                         <li>Click 'Add Configuration' on top bar.</li>
+                        <img src={CBSIntelliConfig}/>
                         <li>Click plus symbol that indicates an add.</li>
                         <li>Select application.</li>
                         <li>
