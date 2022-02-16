@@ -55,7 +55,7 @@ function SparkConfigurations(props) {
     const handleVCoresChange = (event) => setEMRvCores(event.target.value);
     const handleMemory = (event) => setInstanceMemory(event.target.value);
     const handleCoreInstances = (event) => setEMRCoreInstances(event.target.value);
-    
+
     return (
         <Fragment>
             <Typography variant={'heading'}>
