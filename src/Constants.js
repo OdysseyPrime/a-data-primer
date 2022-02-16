@@ -34,6 +34,10 @@ module.exports = {
             ID: 'development',
             EXTRACT_TRANSFORM_LOAD: 'etl',
             CODE_BASE_SETUP: 'code-base-setup'
+        },
+        CALCULATORS: {
+            ID: 'calculators',
+            SPARK_CONFIGURATIONS: 'spark-configurations'
         }
     },
 }

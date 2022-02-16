@@ -326,7 +326,17 @@ const routes = [
                 ]
             }
         ]
-    }
+    },
+    {
+        display: 'Calculators',
+        id: PAGES.CALCULATORS.ID,
+        children: [
+            {
+                display: 'Spark Configurations',
+                id: PAGES.CALCULATORS.SPARK_CONFIGURATIONS,
+            }
+        ]
+    },
 ]
 
 const format = (which) => {

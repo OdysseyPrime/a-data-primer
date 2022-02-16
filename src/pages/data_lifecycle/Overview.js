@@ -57,42 +57,42 @@ class Overview extends React.Component {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Platform</TableCell>
-                            <TableCell>S3</TableCell>
+                            <TableCell align="left">Platform</TableCell>
+                            <TableCell align="left">S3</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         <TableRow>
-                            <TableCell>Standardized Output</TableCell>
-                            <TableCell>/standardized_output/</TableCell>
+                            <TableCell align="left">Standardized Output</TableCell>
+                            <TableCell align="left">/standardized_output/</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Standardized Output > Raw</TableCell>
-                            <TableCell>/standardized_output/raw/</TableCell>
+                            <TableCell align="left">Standardized Output > Raw</TableCell>
+                            <TableCell align="left">/standardized_output/raw/</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Standardized Output > Raw > Store Mapper (pipe)</TableCell>
-                            <TableCell>/standardized_output/raw/store_mapper</TableCell>
+                            <TableCell align="left">Standardized Output > Raw > Store Mapper (pipe)</TableCell>
+                            <TableCell align="left">/standardized_output/raw/store_mapper</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Standardized Output > Retail Template</TableCell>
-                            <TableCell>/standardized_output/retail_template/</TableCell>
+                            <TableCell align="left">Standardized Output > Retail Template</TableCell>
+                            <TableCell align="left">/standardized_output/retail_template/</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Standardized Output > Product 360</TableCell>
-                            <TableCell>/standardized_output/product_360/</TableCell>
+                            <TableCell align="left">Standardized Output > Product 360</TableCell>
+                            <TableCell align="left">/standardized_output/product_360/</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>ML Solutions > Promotion Effectiveness</TableCell>
-                            <TableCell>/solutions/promotion_effectiveness/</TableCell>
+                            <TableCell align="left">ML Solutions > Promotion Effectiveness</TableCell>
+                            <TableCell align="left">/solutions/promotion_effectiveness/</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>ML Solutions > Promotion Effectiveness > Input Prep</TableCell>
-                            <TableCell>/solutions/promotion_effectiveness/input_prep</TableCell>
+                            <TableCell align="left">ML Solutions > Promotion Effectiveness > Input Prep</TableCell>
+                            <TableCell align="left">/solutions/promotion_effectiveness/input_prep</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Data Quality Assurance > Retail Template > Point of Sale</TableCell>
-                            <TableCell>/standardized_output/retail_template/DQA/point_of_sale</TableCell>
+                            <TableCell align="left">Data Quality Assurance > Retail Template > Point of Sale</TableCell>
+                            <TableCell align="left">/standardized_output/retail_template/DQA/point_of_sale</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>

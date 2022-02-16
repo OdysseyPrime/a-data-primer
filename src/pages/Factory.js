@@ -9,6 +9,7 @@ import VisualDataHub from "pages/visual_data_hub/VisualDataHub";
 import Dashboards from "pages/dashboards/Dashboards";
 import DataLifeCycle from "pages/data_lifecycle/DataLifeCycle";
 import Development from "pages/development/Development";
+import Calculators from "pages/calculators/Calculators";
 
 const styles = () => ({
     root: {}
@@ -75,6 +76,8 @@ class Factory extends React.Component {
                 return <DataLifeCycle breadcrumbs={breadcrumbs}/>
             case PAGES.DEVELOPMENT.ID:
                 return <Development breadcrumbs={breadcrumbs}/>
+            case PAGES.CALCULATORS.ID:
+                return <Calculators breadcrumbs={breadcrumbs}/>
             default:
                 return <Home/>
         }
