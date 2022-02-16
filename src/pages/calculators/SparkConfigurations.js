@@ -75,8 +75,7 @@ function SparkConfigurations(props) {
 
             <Typography variant={'p'}>
                 Spark Configurations calculator allows the calculation of the configurations that we need to set in
-                order
-                to utilize EMR resources in the best way.
+                order to utilize EMR resources in the best way.
             </Typography>
 
             <Typography variant={'p'}>
@@ -129,13 +128,13 @@ function SparkConfigurations(props) {
                 <Table style={{width: '50%'}}>
                     <TableBody>
                         <TableRow>
-                            <TableCell width={'80%'}>Number of executors per instance</TableCell>
-                            <TableCell width={'20%'}>{data.numberOfExecutorsPerInstance}</TableCell>
+                            <TableCell width={'80%'}>Total executor memory</TableCell>
+                            <TableCell width={'20%'}>{data.totalExecutorMemory}</TableCell>
                         </TableRow>
 
                         <TableRow>
-                            <TableCell width={'80%'}>Total executor memory</TableCell>
-                            <TableCell width={'20%'}>{data.totalExecutorMemory}</TableCell>
+                            <TableCell width={'80%'}>spark.num.executors</TableCell>
+                            <TableCell width={'20%'}>{data.numberOfExecutorsPerInstance}</TableCell>
                         </TableRow>
 
                         <TableRow>
