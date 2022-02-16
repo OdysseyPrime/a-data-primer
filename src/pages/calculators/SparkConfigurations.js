@@ -2,7 +2,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import React, {Fragment, useState} from "react";
 import Typography from "presentations/Typography";
 import Divider from "presentations/Divider";
-import {Button, InputAdornment, Table, TextField} from "@material-ui/core";
+import {Button, Checkbox, FormControlLabel, FormGroup, InputAdornment, Table, TextField} from "@material-ui/core";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
@@ -14,6 +14,9 @@ const styles = () => ({
 
 function SparkConfigurations(props) {
     const {section} = props
+
+    const [roundDown, setRoundDown] = useState(true)
+    const handleRoundDown = () => setRoundDown(val => !val);
 
     const [calculated, setCalculated] = useState(false);
 
@@ -36,10 +39,17 @@ function SparkConfigurations(props) {
             return;
         }
 
-        let numberOfExecutorsPerInstance = Math.floor((EMRvCores - 1) / sparkExecutorCores);
-        let totalExecutorMemory = Math.floor(instanceMemory / numberOfExecutorsPerInstance)
-        let sparkExecutorMemory = Math.floor(totalExecutorMemory * 0.9)
-        let sparkYarnExecutorMemoryOverhead =  Math.ceil(totalExecutorMemory * 0.1)
+        let expr;
+        expr = (EMRvCores - 1) / sparkExecutorCores
+        let numberOfExecutorsPerInstance = roundDown ? Math.floor(expr) : Math.ceil(expr);
+
+        expr = instanceMemory / numberOfExecutorsPerInstance
+        let totalExecutorMemory = roundDown ? Math.floor(expr) : Math.ceil(expr);
+
+        expr = totalExecutorMemory * 0.9
+        let sparkExecutorMemory = roundDown ? Math.floor(expr) : Math.ceil(expr);
+
+        let sparkYarnExecutorMemoryOverhead = Math.ceil(totalExecutorMemory * 0.1)
         let sparkExecutorInstances = (numberOfExecutorsPerInstance * EMRCoreInstances) - 1
         let sparkDefaultParallelism = sparkExecutorInstances * sparkExecutorCores * 2
 
@@ -64,7 +74,8 @@ function SparkConfigurations(props) {
             </Typography>
 
             <Typography variant={'p'}>
-                Spark Configurations calculator allows the calculation of the configurations that we need to set in order
+                Spark Configurations calculator allows the calculation of the configurations that we need to set in
+                order
                 to utilize EMR resources in the best way.
             </Typography>
 
@@ -72,7 +83,8 @@ function SparkConfigurations(props) {
                 Below, we will describe in more details what the input boxes mean:
 
                 <ol>
-                    <li>Spark Executor Cores: the number of cores that we want to allocate to our Spark application.</li>
+                    <li>Spark Executor Cores: the number of cores that we want to allocate to our Spark application.
+                    </li>
                     <li>Instance vCores: virtual cores of one EMR core node.</li>
                     <li>Instance memory: memory of one EMR core node.</li>
                     <li>Number of core instances: the total number of EMR core (and task) nodes.</li>
@@ -85,7 +97,8 @@ function SparkConfigurations(props) {
                                        endAdornment: <InputAdornment position="end">units</InputAdornment>,
                                    }}
                                    value={sparkExecutorCores}/></Typography>
-            <Typography><TextField label={'Instance vCores (from AWS)'} style={{'width': '30%'}} onChange={handleVCoresChange}
+            <Typography><TextField label={'Instance vCores (from AWS)'} style={{'width': '30%'}}
+                                   onChange={handleVCoresChange}
                                    variant={'outlined'}
                                    InputProps={{
                                        endAdornment: <InputAdornment position="end">units</InputAdornment>,
@@ -104,6 +117,13 @@ function SparkConfigurations(props) {
                                    }}
                                    value={EMRCoreInstances}/></Typography>
             <Typography><Button variant={'outlined'} onClick={updateVariables}>Calculate</Button></Typography>
+
+            <Typography>
+                <FormGroup>
+                    <FormControlLabel control={<Checkbox onChange={handleRoundDown} value={roundDown}/>}
+                                      label="Round down? (Check this if you do not want to allocate more resources)"/>
+                </FormGroup>
+            </Typography>
 
             {calculated ?
                 <Table style={{width: '50%'}}>
