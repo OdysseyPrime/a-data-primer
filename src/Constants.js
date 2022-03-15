@@ -9,6 +9,7 @@ module.exports = {
         },
         VISUAL_DATA_HUB: {
             ID: 'visual-data-hub',
+            EXPLAINING_SCHEMA: 'explaining-schema',
             YOUR_FIRST_PIPELINE: 'your-first-pipeline',
             PLAIN_VALUES_DICTIONARY: 'plain-values-dictionary',
             GLOB_PATTERNS: 'glob-patterns',

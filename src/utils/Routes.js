@@ -14,32 +14,46 @@ const routes = [
                 display: 'Your First Pipeline',
             },
             {
+                id: PAGES.VISUAL_DATA_HUB.EXPLAINING_SCHEMA,
+                display: 'Data Source Schema',
+                children: [
+                    {
+                        display: 'Example 1',
+                        id: 'example-1-explaining-schema'
+                    },
+                    {
+                        display: 'Example 2',
+                        id: 'example-2-explaining-schema'
+                    }
+                ]
+            },
+            {
                 display: 'Glob Patterns',
                 id: PAGES.VISUAL_DATA_HUB.GLOB_PATTERNS,
                 children: [
                     {
                         display: '1st Example',
-                        id: 'example-1'
+                        id: 'example-1-globs'
                     },
                     {
                         display: '2nd Example',
-                        id: 'example-2'
+                        id: 'example-2-globs'
                     },
                     {
                         display: '3rd Example',
-                        id: 'example-3'
+                        id: 'example-3-globs'
                     },
                     {
                         display: '4th Example',
-                        id: 'example-4'
+                        id: 'example-4-globs'
                     },
                     {
                         display: '5th Example',
-                        id: 'example-5'
+                        id: 'example-5-globs'
                     },
                     {
                         display: '6th Example',
-                        id: 'example-6'
+                        id: 'example-6-globs'
                     }
                 ]
             },
