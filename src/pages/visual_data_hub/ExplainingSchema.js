@@ -38,7 +38,6 @@ class ExplainingSchema extends React.Component {
                 </Typography>
 
                 <Typography>
-                    From this point, two potential use cases might arise:
                     <ol>
                         <li>Infer schema: let the application decide about the data types of specific columns; this
                             means that the application will get a sample of rows and try to set a type to them. Note,
