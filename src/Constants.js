@@ -34,7 +34,8 @@ module.exports = {
         DEVELOPMENT: {
             ID: 'development',
             EXTRACT_TRANSFORM_LOAD: 'etl',
-            CODE_BASE_SETUP: 'code-base-setup'
+            CODE_BASE_SETUP: 'code-base-setup',
+            CREATING_PULL_REQUEST: 'creating-pull-request'
         },
         CALCULATORS: {
             ID: 'calculators',

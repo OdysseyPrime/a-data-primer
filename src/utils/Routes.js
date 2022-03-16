@@ -322,6 +322,10 @@ const routes = [
                 ]
             },
             {
+                display: 'Creating a Pull Request',
+                id: PAGES.DEVELOPMENT.CREATING_PULL_REQUEST,
+            },
+            {
                 display: 'ETL: Making a Module',
                 id: PAGES.DEVELOPMENT.EXTRACT_TRANSFORM_LOAD,
                 children: [

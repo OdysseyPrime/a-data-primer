@@ -4,6 +4,7 @@ import Intro from "pages/development/Intro";
 import React from "react";
 import ETL from "pages/development/ExtractTransformLoad";
 import CodeBaseSetup from "pages/development/CodeBaseSetup";
+import CreatingPullRequest from "pages/development/CreatingPullRequest";
 
 const styles = () => ({
     root: {},
@@ -25,6 +26,8 @@ class Development extends React.Component {
         switch (section.id) {
             case PAGES.DEVELOPMENT.EXTRACT_TRANSFORM_LOAD:
                 return <ETL {...props} />
+            case PAGES.DEVELOPMENT.CREATING_PULL_REQUEST:
+                return <CreatingPullRequest {...props} />
             case PAGES.DEVELOPMENT.CODE_BASE_SETUP:
                 return <CodeBaseSetup {...props} />
         }
